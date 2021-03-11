@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>2Week - 03/11 (과제)</title>
+    </head>
+    <body>
+        <h1>21961027 김지후 과제입니다.</h1>
+
+        <script type="text/javascript">
+
+            // 1. JavaScript 연습 
+
+            // data type (데이터 타입);
+            // boolean 논리 참 / 거짓 (true / false)
+            // number 숫자
+            // string 문자
+            // undefined 정의되지 않은
+            // null 의도적으로 값이 비워서 할당 typeof로 검사하면 object타입.
+            // NaN 수식이 성립되지 않은 수
+
+            // 연산자를 통한 계산 연습 
+
+            // 1. 산술, 대입 연산자 - 22에 3을 더하고 4를 곱한 뒤 9를 나눈 값은?
+
+            var a = 1;
+            var b = 2;
+            var c = 3;
+            var d = 4; 
+            var e = "1";  // 계산식에 활용할 변수들
+
+            var sum; // 결과값
+
+            sum = (b * 11 + 3) * d / 9;  // 25(2 * 10 + 3)을 4로 곱한 뒤 9로 나누면 1이 나머지로 남고, 나누어 떨어지지 않는다.
+            console.log(sum);
+
+            // 2. 산술, 대입 연산자 - 63을 4로 나눈 값의 나머지에 1을 더한 뒤 2로 곱한 값은?
+
+            sum = (((4 % (c * 21)) +1) * 2); // 63를 4로 나눈 값의 나머지는 4, 4에 1을 더한 뒤 2를 곱하면 10이다.
+            console.log(sum);
+
+            // 3. 비교 연산자 - 수들의 크기를 비교
+
+            console.log(a + 2 > b); // a + 2(3)은 2보다 크므로 true가 출력된다.
+            console.log(a <= b - 1); // a는 b - 1(2)와 같거나 작으므로 true가 출력된다.
+            console.log(a == b); // a는 b와 같지 않으므로 false가 출력된다.
+
+
+            // 4. 동등 연산자 - 정수 Data type 변수 a와 문자열 Data type 변수 e를 합쳐서 출력하면?
+
+            console.log(a == e); 
+            /*양측의 Data type이 다르면 JavaScrpit 엔진에 의해 타입 변환이 이루어진 뒤, 두 값을 비교한다. 
+            두 값은 서로 같으므로 true가 반환된다.*/
+
+            // 5. 부정 연산자 - 4번과 같은 변수들을 부정 연산자로 처리하면? 
+
+            console.log(a != e); 
+            //두 값은 서로 같다. 하지만 값이 '틀렸는지 아닌지'판별하는 연산자이기 때문에, false가 출력된다.
+
+            // ※ 일치 연산자 - 일치 연산자의 사용법은 아직 잘 모르겠습니다.
+
+
+            // 2. 자기소개하기 
+
+            var name = "김지후";
+            var age = 22;
+            var birthday = 4.24;
+            var birthDaythisYear = false;
+            var female = true;
+            var idea = null;
+            var boyFriend; // 자기소개에 사용할 변수들.
+
+
+            console.log("안녕하세요, 제 이름은 " + name + "이고, 나이는 " + age + " 세 입니다. \n성별은 여자이고 (" + (female == true) + "), 만 나이는 아직 생일이 지나지 않았으므로 (" + birthDaythisYear + ") " + (age - 2) + " 세 입니다. \n" + "웹 디자인에 대한 아이디어는 아직" + idea + " 이지만, 열심히 해보겠습니다. 남자친구는" +  boyFriend + "인 상태입니다. \n추정컨데 아직 태어나지도 않은 모양입니다.");
+
+
+            /* 질문사항 console.log(typeof {}, typeof []); 는 무슨 목적으로 쓰이는지 궁금합니다.
+            또, 이 문단을 출력시도하면 console에 오류가 뜨는데 무슨 문제가 있는지 모르겠습니다.*/
+
+        </script>
+    </body>
+</html>
