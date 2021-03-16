@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>
+            2Week HW
+        </title>
+    </head>
+    <body>
+       
+        <script type="text/javascript">
+        
+        console.log(10 * 1500); // 15000
+        console.log(100 + 3); // 103
+        console.log(100 - 3); // 97
+        console.log(100 / 3); // 33. 333....
+        console.log(100 % 3); // 1
+
+        console.log("하이"); // 하이
+        console.log("내가 \"안녕하세요!\"라고 말했다."); // 내가 "안녕하세요!"라고 말했다.
+        console.log("내가\n\"안녕하세요!\"라고\n말했다."); // 내가 (줄바꿈) 안녕하세요!"라고 (줄바꿈) 말했다.
+        console.log("나는" + " " + 22 + "살"); // 나는 22살
+        console.log("My name is Jiwon".length); // 16
+        console.log("My name is Jiwon".indexOf("e")); // 6 * indexOf("e") -> 괄호 안에 " " 안 써서 에러 뜸.
+
+        var hi;
+        console.log(hi); // undefined
+        hi = 10;
+        console.log(hi); // 10
+
+        var hi = 12;
+        var bye = 10;
+        var hello = hi + bye;
+        console.log(hi + bye + hello); // 44
+
+        hi = 10;
+        bye = "시야";
+        hello = hi + bye;
+        console.log(hello); //10시야
+        
+        var a = "a";
+        var b = "m";
+        var c = "I";
+        var d = " ";
+        var e = c + d + a + b + d + a + b + b + a;
+        console.log(e); // I am amma
+
+        a = "I";
+        a +=" am";
+        a +=" amma";
+        console.log(a); // I am amma
+
+        a = "I";
+        a *=" am";
+        a /=" amma";
+        console.log(a); // ?? -> NaN
+
+        a = 100;
+        a -= 10; // 90
+        a /= 9; // 10
+        a *= 3; // 30
+        console.log(a); // 30
+
+        // 1.
+        a = 500
+        a += 20;
+        a /= 20;
+        a -= 20;
+        a *= 2;
+        console.log(a); // 12
+
+        // 2.
+        var sum = ((500 + 20) / 20 - 20) * 2;
+        console.log(sum); // 12
+
+        // 3.
+        a = 500
+        b = 20
+        c = 2
+        var sum = ((a + b) / b - b) * c;
+        console.log(sum); // 12
+
+        // Data type. (데이터 타입)
+        // boolean 참 / 거짓 (true / false).
+        // number 숫자
+        // string 문자.
+        // undefined 정의되지 않은.
+        // null 의도해서 값이 없는 상태로 할당.
+        // NaN 수식이 성립되지 않은 수.
+
+        var a = true, b = false;
+        console.log(a, b); // true, false
+
+        a= null;
+        var n;
+        console.log(a, b, n); // null, false, undefined
+
+        console.log(typeof a, typeof b, typeof n); // object, boolean, undefined // * null은 object.
+        console.log(typeof {}, typeof []); // ? -> object, object
+
+        var m = a + b / n;
+        console.log(typeof m); // ? -> number
+
+         // {} - 객체
+        // [] - 배열 객체
+
+
+        //자기소개
+        
+        var hi = "안녕하세요!\n";
+        var name = "김지원";
+        var num = 10;
+        var period = "입니다. ";
+        var like = "좋아하는 ";
+        var me = "제가 ";
+        var T = true;
+        var F = false;
+        var major = "디자인";
+        var a = 100, b = 11, c = 2;
+        var n = null;
+        var un;
+        
+
+
+
+
+        console.log(hi + "계원예대 디지털미디어" + major + "과 " + num * 2 + "학번 " + name + period + "\n저는 " + (((num + a) * c / b) + c) + "살" + period
+        + "키는 " +  (a + (c * c + c) * num) + period
+        + "\n저의 세부전공은 " + major + " = " + F + " "  + "프로그래밍" + " = " + T + "\n" 
+        + me + like + "색깔은 파란색" + period + me + like + "음식은 초밥" + period + "\n"
+        + "아직 진로에 대한 자세한 계획은 " + typeof un + " 하지만 현재에 최선을 다할 생각" + period
+        + "\n아직 자바스크립트에 대해 아는 것 = " + n + " 열심히 따라가겠습니다."
+        + "\n\"잘 부탁드립니다!\"")
+
+
+
+
+
+
+
+</script>
+    </body>
+</html>
