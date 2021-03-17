@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2Week - 03/11</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        1. JavaScript 연습하기.
+        - 숫자(Number), 문자(String), 수학(Math), 변수(variable), 연산자(산술, 대입, 비교, 동등, 일치, 부정), 데이터 타입(Data Type), 오브젝트(Object) 에 대해 익히고 연습합니다.
+        - 값은 console.log() 를 이용하여 출력합니다.
+        - 자신이 연습 작성한 코드 실행 출력 시 예상되는 값은 주석을 이용하여 작성합니다.
+        */
+        
+        // 1-1. Number
+        console.log(2 + 3); // 예상값 : 5
+        console.log(4 + 4.4); // 예상값 : 8.4
+
+        // 1-2. String
+        var menu = "찜닭"
+        console.log(menu); // 예상값 : 찜닭
+        console.log(menu + " 먹고 싶다."); // 예상값 : 찜닭 먹고 싶다.
+        console.log("\"찜닭\" 먹고 싶다."); // 예상값 : "찜닭" 먹고 싶다.
+        console.log("\"찜닭\"\n먹고 싶다.") // 예상값 : "찜닭"<br/>먹고 싶다.
+
+        // 1-3. Math -> X
+
+        // 1-4. Variable
+        // 변수는 값을 계속해서 바꾸어 넣을 수 있는 컨테이너이다.
+        var coffee = "라떼", size = "Large", count = 3;
+        console.log(coffee); // 예상값 : 라떼
+        console.log(coffee + " " + count + "잔" + " 주세요"); // 예상값 : 라떼 3잔 주세요
+        console.log("사이즈는 하나만 " + size + "로 해주세요") // 사이즈는 하나만 Large로 해주세요
+
+        // 1-5. Operator
+        // +, -, *, /, %
+        var a = 4, b = 2, c = 6, d = 2.5;
+        console.log(a + b); // 예상값 : 6
+        console.log(c - d); // 예상값 : 3.5
+        console.log(a * b); // 예상값 : 8
+        console.log(c / b); // 예상값 : 3
+        console.log(c % b); // 예상값 : 0
+        console.log(c % a); // 예상값 : 2
+
+        // 1-6. Data Type
+        // boolean, number, string, undefined, null, NaN
+        var x = true, y = false;
+        console.log(x, y); // 예상값 : true, false
+        var x = 50;
+        console.log(x); // 예상값 : 50
+        var x = "50";
+        console.log(x); // 예상값 : "50"
+        var z;
+        console.log(z); // 예상값 : undefined
+        var x = null;
+        console.log(x); // 예상값 : null
+        
+        // typeof
+        console.log(typeof true); // -> boolean
+        console.log(typeof 50); // -> number
+        console.log(typeof "50"); // -> string
+        console.log(typeof z); // -> undefined
+        console.log(typeof null); // -> object
+        console.log(typeof NaN); // -> number
+        console.log(typeof {}, typeof []); // -> object, object
+
+        // 1-7. Object -> X
+        
+
+
+
+        /*
+        2. 자기소개하기.
+        - 숫자(Number), 문자(String), 수학(Math), 변수(variable), 연산자(산술, 대입, 비교, 동등, 일치, 부정), 데이터 타입(Data Type), 오브젝트(Object) 를 이용하여 장문의 자기소개를 합니다.
+        - 값은 console.log() 를 이용하여 문서 실행시 자기소개가 한꺼번에 출력되도록 합니다.
+        - 데이터 형식, 연산 등에서 잘 모르는 부분은 주석을 이용하여 질문을 합니다.
+        */
+        
+        var greeting = "안녕하세요.", name = "이은서", num1 = 2, num2 = 10, num3 = 3;
+        var p1 = greeting + " 제 이름은 " + name + "이고 " + "나이는 " + ((num1 * num2) + num3) + "살입니다.";
+
+        var semester = 2, school1 = "휴학", school2 = "복학", num4 = 1;
+        var p2 = "작년 " + semester + "학기 " + school1 + " 후 " + "올해 " + school2 + "한 " + ((num1 * num2) - num4) + "학번 " + school2 + "생입니다...";
+        
+        var city = "산본", hobby = "취미", genre = "장르", music = "노래 듣기";
+        var p3 = "사는 곳은 " + city + "이고 " + hobby + "는 " + genre + " 가리지 않고 " + music + "입니다.";
+        
+        var js = "자바스크립트", study = "공부", fun = "재미";
+        var p4 = js + " " + study + " 너무 " + fun + " 있어요.";
+        
+        var more = "더", greeting = "감사합니다.";
+        var p5 = "올해는 " + more + " 건강하게 " + more + " 열심히 " + "하겠습니다. " + greeting;
+
+        console.log(p1 + "\n" + p2 + "\n" + p3 + "\n" + p4 + "\n" + p5);
+
+        /*
+        ->
+        안녕하세요. 제 이름은 이은서이고 나이는 23살입니다.
+        작년 2학기 휴학 후 올해 복학한 19학번 복학생입니다...
+        사는 곳은 산본이고 취미는 장르 가리지 않고 노래 듣기입니다.
+        자바스크립트 공부 너무 재미 있어요.
+        올해는 더 건강하게 더 열심히 하겠습니다. 감사합니다.
+        */
+
+
+    </script>
+</body>
+</html>
