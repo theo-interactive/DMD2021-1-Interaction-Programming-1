@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8"/>
+    <title>2Week - 03/15 - 과제</title>
+</html>
+<body>
+    <script type="text/javascript">
+    // 숫자 (number), 문자 (string), 수학 (math), 변수 (variable), 
+    // 연산자 (산술, 대입, 비교, 동등, 일치, 부정), 데이터 타입 (data type), 오브젝트 (object) 에 대해 익히고 연습
+    // 값은 console.log()를 이용하여 출력
+    // 연습 작성한 코드 실행 출력 시 예상되는 값은 주석으로 작성
+
+    // number, math
+    console.log(7) // -> 7
+    console.log(1 + 3); // -> 4 정수 + 정수 = 정수형태 값
+    console.log(1 + 3.5); // -> 4.5 정수 + 실수 = 실수형태 값
+
+    
+    // string
+    console.log("김수빈"); // -> 김수빈 문자는 "" 사이에 작성
+    console.log("21861025\n김수빈")
+    // -> 21861025 
+    // -> 김수빈
+    // \n 은 줄바꿈
+
+    // "문자" 에서 "" << 와 같은 특수 문자를 사용하고 싶을 때, \" 식으로 작성
+    console.log("\"안녕하세요\"") // -> "안녕하세요"
+
+    // 문자열 기능
+    // length 길이
+    console.log("Microsoft Teams".length); // 문자열의 길이. -> 15 띄어쓰기도 문자로 반영?하는거 같음
+    // "문자".indexOf("문자") 앞의 문자의 길이에서 (해당문자)의 위치 (순번) 찾기 
+    console.log("Microsoft Teams".indexOf("c")); // -> 2 3번째에 있지만 0부터 시작하기 때문에 0 1 2 로 2가 됨
+    console.log("Microsoft Teams".indexOf("s")); // -> 5 2개가 있을 경우, 앞에 있는 걸로 반영?되는거 같음
+
+    // 연산자
+    // + - * / % 연산부호 활용
+    console.log(1 + 7) // -> 8
+    console.log(5 * 4) // -> 20
+    console.log(10 % 3) // -> 1
+    // % 연산부호는 나머지를 계산함. 몫을 빼고 남은 나머지 값
+
+    console.log(1 < 2); // -> true
+    console.log(1 > 2); // -> false
+    // true 연산 수식이 맞으면 true, 틀릴경우 false
+
+    console.log("21861025" + "김수빈") // -> 21861025김수빈
+    console.log("21861025" + " " + "김수빈") // -> 21861025 김수빈
+    // 문자열 연산에서의 띄어쓰기 시 띄어쓰기도 문자로써 넣어주어야 함
+
+    // 변수
+    var a = 1; // 변수 a 는 1의 값을 가진다. 변수 = 값
+    console.log(a); // 변수a = 1이라고 선언했기에 -> 1
+
+    var b = 2;
+    var c = 3;
+    console.log(a + b - c); // -> 0 / a + b - c / 1 + 2 - 3
+
+    var a = b + c; // -> 5 / 위의 변수a 값을 선언했지만 다시 변수a 값을 재선언 할 수 있다.
+    // 이 선언 이후 변수a 값은 5가 된다.
+    console.log(a + b - c); // -> 4 / 5 + 2 - 3
+
+    // 숫자를 직접 입력하여 값을 내도 되지만 변수를 활용하여 연산도 가능
+    var number = ((20 + 20) * 5 - 20) / 5;
+    console.log(number); // -> 36
+    
+    var a = 20;
+    var b = 5;
+    var number = ((a + a) * b - a) / 5; 
+    console.log(number); // -> 36
+
+    // 변수에 문자값을 설정하여 연산도 가능
+    var a = 21861025;
+    var b = "김수빈";
+    var string = a + b;
+    console.log(string); // 21861025김수빈
+    // 숫자값 + 문자열값 = 문자열값으로 연산
+
+    string = string + b;
+    console.log(string); // 21861025김수빈김수빈
+    string += a;
+    console.log(string); // 21861025김수빈김수빈21861025
+    // 변수 += 값 -> 앞에서 선언한 변수값 + 값 / 21861025김수빈김수빈 을 입력하지않고 축약해서 쓸 때 사용
+
+    // 데이터 타입
+    var a = 1;
+    var b = "1";
+    var c = null;
+    var d;
+
+    console.log(typeof a); // 1은 숫자이므로 숫자 1 값을 가진다.
+    console.log(typeof b); // 숫자1이지만 "" 사이에 들어가 문자로써의 값을 가진다.
+    console.log(typeof c); // 의도적으로 c의 값이 없음을 표현
+    console.log(typeof d); // underfined 값을 찾지 못했다는 의미로 수식이 성립하지 않았을 때, 이 값으로 설정된다.
+
+    console.log(a, b, c, d);
+
+
+    // 숫자, 문자, 수학, 변수, 연산자, 데이터 타입, 오브젝트로 장문의 자기소개
+    // 값은 console.log()를 이용하여 출력
+    //데이터 형식, 연산 등에서 잘 모르는 부분은 주석을 이용해서 질문
+
+    // 자기소개
+    
+    var a = 9;
+    var b = 1;
+    var hello = "안녕하세요.";
+    var nam = "이름";
+    var name = "김수빈";
+    var defined = "defined";
+    var e = "Error";
+
+    alert(hello + " " + (a * 2) + "학번 복학생 " +  name + "입니다.");
+
+    console.log("저는 " + b + a + a + a + "년 " + b + "월생으로 빠른 " + a + a + "년생입니다.\n"
+                ,"빠른 " + (("a few years old".length) - "a few years old".indexOf("y")) + a + "년생이 될 수 있었지만 유치원을 다니던 어린이 시절에\n"
+                ,"또래의 친구들과 같이 놀고싶다는 마음으로 부모님한테 떼를 써서 " + (a - b) + "살에 입학하게 되었습니다.\n\n"
+                // 문자 + 숫자 + 숫자 + 숫자 지만 앞에서부터 수식이 진행되기 때문에 문자 + 숫자 = 문자
+                ,"TMI지만 제 " + nam + "이 " + name + "인 이유는 제가 태어나기 전에 부모님이 여자아이를 바란게 어느정도 반영되서 작명했다고\n"
+                ,a * 2 + "년도에 같이 술 한잔 마시면서 이야기를 나누다 알게되었습니다.\n"
+                ,"하지만 " + nam + "의 의미가 좋아 " + name + "으로 냅뒀다고 합니다.\n\n"
+                
+                ,"프로그래밍 수업을 신청한 계기는 " + b + "학년 " + b + "학기 때, 미디어와 테크놀로지 수업에서\n"
+                ,d + " 된 부분과 " + e + "가 뜬 부분을 찾아 " + "수정하여 " + e + "를 고치고 작동시켰을 때의 성취감이 매우 좋았기 때문입니다.");
+
+    </script>
+</body>
