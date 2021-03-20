@@ -11,6 +11,8 @@ Quest 1.
 */
 // Answer 1.
 
+var a = 29;
+var b = a + 2;
 
 
 /*
