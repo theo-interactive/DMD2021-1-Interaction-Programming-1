@@ -24,7 +24,7 @@ console.log('c %= a: ', c); // 2
 
 b %= c;
 console.log('b %= c: ', b);
-if (b == 1) {
+if (b === 1) {
     console.log("일치합니다.");
 } else {
     console.log("일치하지 않습니다.");
