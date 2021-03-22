@@ -19,8 +19,9 @@ console.log('b += a: ' , b); // 31
 
 var c;
 c = 3;
-c %= a;
-console.log('c %= a: ', c); // 2
+// c %= a;
+a %= c;
+console.log('c %= a: ', a); // 2
 
 b %= c;
 console.log('b %= c: ', b);
