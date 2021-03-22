@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>2WEEK</title>
+    </head>
+    <body>
+        <h1>2WEEK - 03/11</h1>
+        <h2>22061062 서재윤</h2>
+        <script type="text/javascript">
+            alert("'안녕하세요.console창을 확인해주세요'")
+            //1. JavaScript 연습하기
+            /*
+             -숫자(Number), 문자(String), 수학(Math), 변수(variable), 연산자(산술, 대입, 비교, 동등, 일치, 부정),
+             데이터 타입(Data Type), 오브젝트(Object) 에 대해 익히고 연습합니다
+             -값은 console.log() 를 이용하여 출력합니다.
+             -자신이 연습 작성한 코드 실행 출력 시 예상되는 값은 주석을 이용하여 작성합니다.
+            */
+
+            // 숫자 Number
+            // 정수, 실수로 구분이 되지만 자바스크립트에서는 크게 중요하지 않음
+            console.log(4 + 3); // -> 7
+            console.log(4.7 + 2.28); // -> 6.98
+            console.log(539 + 73.67); // -> 612.67
+
+            // 연산자 Operator
+            // + - * / , %는 나머지를 나타내어 콘솔창에 띄움
+            console.log(6 - 3); // -> 3
+            console.log(6 * 9); // -> 54
+            console.log(6 / 2); // -> 3
+            console.log(20 / 3); // -> 6.666~
+            // % 사용하면, 나눈 후에 나머지를 콘솔창에 나타냄
+            console.log(10 % 5); // -> 0 (몫이 2, 나머지가 0)
+            console.log(20 % 3); // -> 2  (몫이 6, 나머지가 3)
+
+            // 문자 String
+            // 문자는 ""나 ''사이에 쓰임
+            console.log("안녕하세요");
+            console.log('반가워요');
+            // escape 사용 \를 사용하게 되면 원래 콘솔창에는 나타나지 않는 '',""가 나타나게 됨.
+            // \의 영향이 "" 안쪽에 있는 모든 것에 적용이 되는것이라 생각중
+            console.log("'미소 :>\ !'");
+            console.log('띄어쓰기도 \적용이 \되는걸까요  !\  ');
+            // new line \n을 쓰면 줄바꿈을 할 수 있다.
+            console.log("서\n재\n윤");
+            //문자의 연산
+            console.log("21" + "살" + "~~! ~~~");
+            console.log(1 + "123456"); // -> 1123456이라는 문자열이 나옴
+            //문자열 기능
+            //length 를 쓰면 문자의 길이를 숫자로 나타내줌
+            console.log("Apple".length); // -> 5
+            //그럼 한글도 적용이 될까?
+            console.log("사과먹고싶다".length); 
+            // -> 된다 6개로 나오는 것을 보니, 혹시 자음 모음 나눠질까 예상했지만, 한글는 한글자를 하나로 취급한다.
+            //indexOf를 쓰면 원하는 문자의 순번을 찾아준다.
+            console.log("apple".indexOf("l")); // -> 3 , 첫글자부터 0으로 시작해서 세기 때문에 3이다.
+            console.log("사과먹고싶다".indexOf("먹")); // 한글도 적용이 된다.
+            console.log("사과먹고싶다".indexOf("ㅁ")); // 혹시나 자음이 적용이 될까 했지만 -1이라는 값이 나오는 걸 보니 안되는거 같다.
+            //혹시 자음같은 것을 찾을 수 있게 하는 방법이 있나요?
+
+            // Variable 변수
+            // 한번 선언 후에 계속해서 값을 변환하여 사용할 수 있다
+            var a = 1; 
+            console.log(a); // -> 1
+            a = "일";
+            console.log(a); // -> "일"
+
+            // Data type 데이터 타입
+            // boolean(true / false) , number, string, <undefined, null, NaN> 아직 이 셋은 어느때 사용해야 하는 걸지 잘 모르겠습니다..
+            var v = null;
+            console.log(v);
+
+            //자기소개
+
+            var program = "프로그램"
+            var name = "서재윤"
+            var age = ("Ihaveatwocatsandpuppy".length)
+            var cat = 2 + "마리의 고양이" 
+            var dog = "말티즈" + "한 마리"
+
+            console.log("안녕하세요, 저는 이번학년부터" + program + "를 전공하게된 " + name + "입니다" + "..." + "\n디자인 말고도 " + program + 
+                        "를 배울 수 있게 되어서 좋고, 이번년도간 열심히 " + program + "를 배워서 나만의 작품을 제작해보고 싶습니다." + "저는 올해"
+                        + age + "살 이고, 귀여운 " + cat + "와 "+ dog +"를 키우고 있습니다." );
+    
+        </script>
+    </body>
+</html>
