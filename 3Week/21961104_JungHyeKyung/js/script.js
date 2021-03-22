@@ -57,10 +57,10 @@ console 에 출력  예시 : 1은 홀수!
 var num = 1;
 for(var i = 0; i < 50; i++){ // 0 ~ 49 반복
     if(num % 2 != 0){ // 2로 나눈 나머지가 0이면 짝수
-        console.log(num, '은 홀수');
+        console.log(num + '은 홀수'); // 원래 num , '은 홀수'이라고 작성했지만 출력 결과가 1 '은 홀수'라고 따로 출력이 되어서 +로 바꿔주었다.
     }
     else{ // 2로 나눈 나머지가 0이 아니면 홀수
-        console.log(num, '은 짝수');
+        console.log(num + '은 짝수');
     }
     num++; // 1를 반복문이 돌 때마다 +1 해준다
 }
