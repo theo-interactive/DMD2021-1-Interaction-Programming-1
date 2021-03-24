@@ -22,7 +22,7 @@ Quest 1.
 
 var a = 29;
 var b = a + 2; 
-var c = b % a;
+var c = a % 9;
 
 
     if(b % c === 1) {
