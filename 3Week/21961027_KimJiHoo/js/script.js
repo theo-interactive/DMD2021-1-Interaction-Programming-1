@@ -41,6 +41,27 @@ for(i = 0; i < alphabet.length; i++){ // i가 alphabet의 배열의 크기보다
 }
 
 
+console.log('a'.charCodeAt()); //문자열의 코드값을 출력
+console.log('b'.charCodeAt()); 
+console.log('c'.charCodeAt()); 
+
+console.log(String.fromCharCode(97)); // 캐릭터 코드에서 문자열을 뽑아올 수 있음.
+// String.fromCharCode(number); => 'string
+// 'string'.sharCodeAt(); => number
+
+var max = 26;
+result = '';
+
+for(i = 0; i < max; i++){
+
+    //'a'.charCodeAt() + i; // 97, 98 ,99, 100...
+    //String.fromCharCode('a'.charCodeAt() + i); // 'a', 'b', 'c', 'd'...
+   // console.log(String.fromCharCode('a',charCodeAt() + i)); 
+    result += String.fromCharCode('a'.charCodeAt() + i);
+}
+
+console.log(result);
+
 /*
 Quest 3.
 1. 숫자 '1' 부터 '50' 까지 순서대로 console 에 출력되도록 반복문을 작성하고 출력 시 해당 값의 짝/홀수 여부를 함께 표시합니다.
