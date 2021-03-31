@@ -31,34 +31,44 @@
 
 // Q2.
 
-// var b = 1;
-// var c= 1;
-// function getTotal(n, s){
+var b = 1;
+var c = 1;
+function getTotal(n, s){
 
-//     var r;
+    var r;
 
-//     if (s === "add"){
-//         for (i = 0; i <= n; i++){
-//             i = i + 1;
-//             b = i + b;
-//         }
-//         r = b;
-//     }
-//     else if (s === "multiply"){
-//         for (i = 0; i <= n; i++){
-//             i = i + 1;
-//             c = c * i;
-//         }
-//         r = c;
-//     }
-//     else {
-//         r = 0;
-//     }
-//     return r;
-// }
-// var re = getTotal(5, "add")
+    if (s === "add"){
+        for (i = 0; i <= n; i++){
+            i = i + 1;
+            b = i + b;
+        }
+        r = b;
+    }
+    else if (s === "multiply"){
+        for (i = 0; i <= n; i++){
+            i = i + 1;
+            c = c * i;
+        }
+        r = c;
+    }
+    else {
+        r = 0;
+    }
+    return r;
+}
 
-// --> 아무것도 출력 안됨..
+
+var re = getTotal(5, "add") // --> 10 출력.
+console.log(re);
+var re = getTotal(10, "add") // --> 46 출력.
+console.log(re);
+var re = getTotal(5, "multiply") // --> 15 출력.
+console.log(re);
+var re = getTotal(10, "multiply") // --> 155925 출력.
+console.log(re);
+var re = getTotal(100) // --> 0 출력.
+console.log(re);
+// 마지막 빼고 다 다르게 나옴.
 // 잘 모르겠습니다ㅜㅜ
 
 
