@@ -220,8 +220,6 @@ getMaxValue([-400, "world", 60, 0, {}, 1000]) 를 호출하여 반환하고 변�
 ----------
 */
 // Answer 6.
-var _arrNum = [];
-// 함수 getMaxValue 를 선언하고 매개변수를 지정한다.
 function getMaxValue(arr6) {
     // 최댓값을 저장할 변수 max 의 초기값에 대한 고민.
     // var max = arr6[0]; // 문제점: 첫 번째 원소에 string type 의 최댓값(예: "5000")이 있을 경우.
@@ -229,23 +227,20 @@ function getMaxValue(arr6) {
     // var max = 임의로 -99999 라고 해야 하나?
     // ...
     // -> 숫자만으로 이루어진 새로운 배열을 만들어 초기값을 설정하기로 한다.
-
+    var arrNum = [];
     for (i = 0; i < arr6.length; i++) {
-        // 배열 arr6 의 원소의 타입이 number 일 경우 새로운 배열 _arrNum 에 원소를 저장한다.
-        // number type 으로만 이루어진 배열 _arrNum 의 첫 번째 원소를 max 의 초기값으로 설정한다.
         if (typeof arr6[i] === 'number') {
-            _arrNum.push(arr6[i]);
-            var max = _arrNum[0];
-
-            // 현재 원소의 값이 기존 저장된 최댓값보다 클 때 max 에 현재 원소 값을 할당한다.
-            if (arr6[i] > max) {
-                max = arr6[i];
-                // 최댓값의 순서를 변수 maxIndex 에 할당한다.
-                var maxIndex = i;
-            }
+            arrNum.push(arr6[i]);
+            var max = arrNum[0];
+            // console.log('max 초기값: ' + max); // arrNum 이 전역변수일 경우 호출한 함수의 초기값이 둘 다 10 으로 출력되는 오류가 발생. -> 지역변수로 변경 후 해결.
+        }
+        // 현재 원소의 값이 기존 저장된 최댓값보다 클 때 max 에 현재 원소 값을 할당한다.
+        if (arr6[i] > max) {
+            max = arr6[i];
+            // console.log('max 현재값: ' + max); // 두 번째로 호출한 getMaxValue([-400, "world", 60, 0, {}, 1000]) 의 max 현재값이 60, 0, 1000 으로 출력되는 오류가 발생. -> 0 이 아닌 다른 수들을 입력해서 테스트해보니 조건절이 max 초기값을 기준으로 판단하는 것을 확인. -> 근데 어떻게 고쳐야 할지 모르겠다!
+            var maxIndex = i;
         }
     }
-    // maxIndex 의 값을 반환한다.
     return maxIndex;
 }
 
