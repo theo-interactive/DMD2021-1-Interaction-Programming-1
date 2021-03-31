@@ -253,4 +253,4 @@ function getMaxValue(_arr) //getMaxValue 함수를 선언합니다! _arr을 적�
 }
 getMaxValue([10, -4, 7, 100, "hello", -50])
 getMaxValue([-400, "world", 60, 0, {}, 1000])
-//문자일때는 undefined가 나옵니다....어디서 틀린건지는 잘 모르겠습니다.ㅜㅜ
+//문자일때는 undefined가 나옵니다....어디서 틀린건지는 잘 모르겠습니다.ㅜㅜ 아마도 'number'와 'string'자리만 바꾸면 문제가 해결 될거라고 생각을 했는데 그것이 아니었나 봅니다.
