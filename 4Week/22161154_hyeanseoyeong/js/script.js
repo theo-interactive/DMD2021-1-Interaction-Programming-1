@@ -209,25 +209,21 @@ getMaxValue([-400, "world", 60, 0, {}, 1000]) 를 호출하여 반환하고 변�
 ----------
 */
 // Answer 6.
-
 function getMaxValue(arr3) {
-    var onlynumber = []; //숫자타입만 골라 넣어줄 새로운 배열 생성.
     var max = arr3[0];
-    var result;
-    for(i = 0; i < arr3.length; i++) {
-        if(typeof arr3[i] === "number") // 우선 데이터 타입이 number인 원소만 구분.
-        {
-            for (i=0; i < arr3_length; i++) {
-                if(max < arr3[i]) {
-                    max = arr3[i];
-                    result = i;
+            for (i=0; i < arr3.length; i++) {
+                if(typeof arr3[i] === "number") // 우선 데이터 타입이 number인 원소만 구분.
+                { 
+                if(max < arr3[i]) {  //배열의 첫번째 순서인 max랑 arr3[i]과 크기 비교
+                    max = arr3[i];  //arr3[i]의 숫자가 더 커졌을 때, 그 값은 max가 된다. 
+                    result = i;  
                 }
-            }
-        }
+                }
     }
-    return max; 
+    return result;
 }
-getMaxValue([10, -4, 7, 100, "hello", -50])  //3
-getMaxValue([-400, "world", 60, 0, {}, 1000]) //5
-console.log(max);
+var result;
+result = getMaxValue([10, -4, 7, 100, "hello", -50])  //3
+result = getMaxValue([-400, "world", 60, 0, {}, 1000]) //5
+console.log(result);  
 
