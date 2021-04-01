@@ -31,7 +31,28 @@ compareNumbers(10, 20) 을 호출한 경우 : "첫번째 매개변수에 할당�
 ----------
 */
 // Answer 1.
-
+function compareNumbers(number1, number2) {
+    // if (number2 === undefined) {
+    //     console.log('두번째 매개변수의 값을 찾을 수 없습니다.');
+    // }
+    if (typeof number2 === 'undefined') {
+        console.log('두번째 매개변수의 값을 찾을 수 없습니다.');
+    } else {
+        // 
+    }
+    if (number1 !== undefined && number2 !== undefined) {
+        if (number1 >= number2) {
+            console.log('첫번째 매개변수에 할당된 전달인자의 값이 두번째 매개변수에 할당된 전달인자의 값보다 크거나 같습니다.');
+        } else {
+            console.log('첫번째 매개변수에 할당된 전달인자의 값이 두번째 매개변수에 할당된 전달인자의 값보다 작습니다.');
+        }
+    }
+}
+// compareNumbers(); // number1, number2 둘 다 값이 없음.
+// compareNumbers(1); // number2 의 값이 없음
+compareNumbers(10);
+compareNumbers(20, 10);
+compareNumbers(10, 20);
 
 
 /*
@@ -58,6 +79,50 @@ getTotal(100) 를 호출하여 반환하고 변수를 출력한 결과값 : 0
 ----------
 */
 // Answer 2.
+function getTotal(max, type) {
+    var result, i;
+    if (type === 'add') {
+        result = 0;
+        for (i = 1; i <= max; i++) {
+            result += i;
+        }
+    } else if (type === 'multiply') {
+        // 0 * 100 = 0;
+        // result = 0;
+        for (i = 1; i <= max; i++) {
+            if (i === 1) {
+                result = i;
+            } else {
+                result *= i;
+            }
+        }
+    } else {
+        result = 0;
+    }
+    return result;
+
+    switch (type) {
+        case 'add' :
+            // type 이 'add' 일 때.
+            break;
+        case 'multiply' :
+            // type 이 'multiply' 일 때.
+            break;
+        default : 
+            // 모든 조건이 성립하지 않을 때.
+            break;
+    }
+}
+var total = getTotal(5, "add");
+console.log(total);
+total = getTotal(10, "add");
+console.log(total);
+total = getTotal(5, "multiply");
+console.log(total);
+total = getTotal(10, "multiply");
+console.log(total);
+total = getTotal(100);
+console.log(total);
 
 
 
@@ -73,7 +138,42 @@ Benz, Volvo, Audi, Tesla.
 ----------
 */
 // Answer 3.
-
+var _cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+var result = '', i;
+// i = 0;
+// while (i < _cars.length) {
+//     // i 가 계속해서 같은 값인 상태.
+//     i++;
+// }
+for (i = 0; i < _cars.length; i++) {
+    // if (i > 0) {
+    //     result += ', ';
+    // }
+    result += _cars[i];
+    if (i < _cars.length - 1) {
+        result += ', ';
+    } else {
+        result += '.';
+    }
+}
+console.log(result);
+result = '';
+// for ... in
+for (var index in _cars) {
+    // console.log(index); // type - string.
+    // Number(index) -> number 타입으로 변경
+    // parseInt(index) -> 진법으로 정수값 변경.
+    // parseInt("0", 10); -> 10진수 값으로 number 타입 변경.
+    if (parseInt(index) > 0) {
+        result += ', ';
+    }
+    // console.log(_cars[index]);
+    result += _cars[index];
+    if (parseInt(index) === _cars.length - 1) {
+        result += '.';
+    }
+}
+console.log(result);
 
 
 /*
@@ -89,6 +189,28 @@ searchIndex([8, 10, 13, 30, 50], 30) 를 호출한 경우 : 3
 ----------
 */
 // Answer 4.
+function searchIndex(_array, number) {
+    var order;
+    for (var index in _array) {
+        if (_array[index] === number) {
+            // console.log('일치', index, _array[index]);
+            order = parseInt(index);
+        }
+        // console.log(_array[index]);
+    }
+    console.log(order);
+    
+    order;
+    // array map() - 배열 반복.
+    _array.map(function(value, index) {
+        // console.log(value, index);
+        if (value === number) {
+            order = index;
+        }
+    });
+    console.log(order);
+}
+searchIndex([8, 10, 13, 30, 50], 30);
 
 
 
@@ -106,7 +228,34 @@ checkType([10, 'Hello', 'World', {name : 'rh'}, [10, 20]]) 를 호출한 경우
 ----------
 */
 // Answer 5.
+function checkType(_array) {
+    var types = [];
+    // types = new Array();
+    for (var index in _array) {
+        // console.log(_array[index]);
+        // typeof _array[index]; // -> type
+        types.push(typeof _array[index]);
+    }
+    console.log(types);
 
+    // _array.map(function(value) {
+        // types.push(typeof value);
+    // });
+    // console.log(types);
+
+    types = _array.map(function(value) { return typeof value });
+    console.log(types);
+
+    // array filter() 배열 필터링.
+    types = _array.filter(function(value) {
+        return typeof value === 'string';
+        // return typeof value === 'number';
+        // return typeof value === 'object';
+    });
+    console.log(types);
+
+}
+checkType([10, 'Hello', 'World', {name : 'rh'}, [10, 20]]);
 
 
 /*
@@ -126,5 +275,68 @@ getMaxValue([-400, "world", 60, 0, {}, 1000]) 를 호출하여 반환하고 변�
 ----------
 */
 // Answer 6.
-
-
+function getMaxValue(_array) {
+    var order, max;
+    // 반복문으로 적용. for
+    for (var i = 0; i < _array.length; i++) {
+        if (typeof _array[i] === 'number') {
+            if (max === undefined) {
+                max = _array[i];
+                order = i;
+            } else {
+                if (max <= _array[i]) {
+                    max = _array[i];
+                    order = i;
+                }
+            }
+        }
+    }
+    console.log(max, order);
+    // 배열(객체) 반복으로 적용. for ... in
+    order; // undefined.
+    max;
+    for (var index in _array) {
+        if (typeof _array[index] === 'number') {
+            if (max === undefined) {
+                max = _array[index]; // 다음 원소값과의 비교를 위한 초기 값 적용.
+                order = parseInt(index);
+            } else {
+                if (max <= _array[index]) {
+                    max = _array[index];
+                    order = parseInt(index);
+                }
+            }
+        }
+    }
+    console.log(max, order);
+    // array map() 배열 반복으로 적용.
+    order; // undefined.
+    max;
+    _array.map((value, index) => {
+        if (typeof value === 'number') {
+            if (max === undefined) {
+                max = value;
+                order = index;
+            } else {
+                if (max <= value) {
+                    max = value;
+                    order = index;
+                }
+            }
+        }
+    });
+    console.log(max, order);
+    // ES6 화살표 함수.
+    // (param1) => {
+    // }
+    // === 
+    // _array.map(function() {});
+    // ES5 명시적 함수.
+    // function(param1) {
+    // }
+    return order;
+}
+var max = getMaxValue([10, -4, 7, 100, "hello", -50]);
+console.log(max);
+max = getMaxValue([-400, "world", 60, 0, {}, 1000]);
+console.log(max);
