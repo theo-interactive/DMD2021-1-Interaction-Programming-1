@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+html,body {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.box {
+    width: 1000px;
+    height: 1000px;
+    background-color: aqua;
+}
