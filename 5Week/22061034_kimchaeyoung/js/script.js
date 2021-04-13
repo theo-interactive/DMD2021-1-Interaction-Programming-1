@@ -160,7 +160,7 @@ function getSize()
 {
     // 윈도우 콘텐츠 영역의 넓이값과 높이값을 아래 객체 형식으로 선언
  var winwidth = window.innerWidth, winHeight = window.innerHeight;
- var result = "윈도의 콘텐츠의 영역 width : " + winwidth + "px, height :" + winHeight + "px입니다."
+ var result = "윈도우 콘텐츠의 영역 width : " + winwidth + "px, height :" + winHeight + "px입니다."
  return result;
 }
  // winSize 변수 선언
