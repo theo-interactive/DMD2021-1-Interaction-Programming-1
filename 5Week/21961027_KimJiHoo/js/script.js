@@ -137,3 +137,21 @@ function getSize(){ // 함수 선언
 
 var winSize = getSize();
 console.log(winSize); // 윈도우 콘텐츠의 넓이값과 높이값이 출력, 문제 해결!
+
+
+function getSize2(){
+    console.log(window.innerWidth, window.innerHeight);
+    return {
+        winWidth : window.innerWidth,
+        winHeight : window.innerHeight
+    };
+}
+
+var winSize2 = getSize2(); // 반환된 객체를 출력.
+var result3 = '윈도우 콘텐츠의 영역 width : ' + winSize2.winWidth + 'px, height : ' + winSize2.winHeight + 'px 입니다.'
+
+// ES6 이상의 구문.
+result3 = `윈도우 콘텐츠의 영역 width : ${winSize.winWidth} px, height : ${winSize2.winHeight} px 입니다.`; 
+// ``를 사용하는 경우 중간에 ${값}을 이용해 값을 주입.
+
+console.log(result3); 
