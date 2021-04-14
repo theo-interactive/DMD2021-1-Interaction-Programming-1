@@ -5,10 +5,9 @@
 }
 body {
   font-family: "Noto Sans KR", sans-serif;
-  /* width:100%; */
-  width:2000px;
-  height:2000px;
-  background-color:#000
+  width:100%;
+  font-size:12px;
+	line-height:18px
 }
 h1 {
   color: #333;
