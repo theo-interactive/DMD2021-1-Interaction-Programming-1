@@ -7,7 +7,7 @@ Quest 1.
 1. 문서의 title을 '학번_이름' 으로 변경합니다.
 */
 // Answer 1.
-
+document.title = '20210000_김용원';
 
 
 /*
@@ -15,7 +15,21 @@ Quest 2.
 1. id 가 'title' 인 요소에 'Hello World' 문자열이 포함되도록 작성합니다.
 */
 // Answer 2.
+var titleEl = document.getElementById('title');
+// console.log(titleEl);
+titleEl.innerHTML = 'Hello World';
+titleEl.innerText = 'Hello World';
+titleEl.innerHTML = '<div class="box">Hello World</div>'
 
+var html = '';
+html += '<div class="box">';
+for (var i = 0; i < 10; i++) {
+    html += 'Hello World';
+    html += '<br />';
+}
+html += '</div>';
+
+titleEl.innerHTML = html;
 
 
 /*
@@ -23,7 +37,13 @@ Quest 3.
 1. class 가 'title' 인 요소들에 '안녕하세요.' 문자열이 포함되도록 작성합니다.
 */
 // Answer 3.
-
+var titleEls = document.getElementsByClassName('title');
+// console.log(titleEls);
+for (i = 0; i < titleEls.length; i++) {
+    // console.log(titleEls[i]);
+    var titleEl = titleEls[i];
+    titleEl.innerHTML = '안녕하세요.';
+}
 
 
 /*
@@ -37,7 +57,15 @@ row class의 개수는 __개 입니다.
 ----------
 */
 // Answer 4.
-
+function getRowCount() {
+    var rowEls = document.getElementsByClassName('row');
+    return rowEls.length;
+}
+var rowCount = getRowCount();
+// console.log(rowCount);
+var msg = `row class의 개수는 ${rowCount}개 입니다.`;
+msg = 'row class의 개수는 ' + rowCount + '개 입니다.';
+console.log(msg);
 
 
 /*
@@ -47,7 +75,15 @@ Quest 5.
 3. 10 번의 출력 후 해당 기능이 실행되지 않도록 작성합니다.
 */
 // Answer 5.
-
+var count = 0;
+function setCount() {
+    count++;
+    console.log('hello', count);
+    if (count >= 10) {
+        clearInterval(timer);
+    }
+}
+var timer = setInterval(setCount, 1000);
 
 
 /*
@@ -56,7 +92,13 @@ Quest 6.
 2. 1(순서) 요소의 위치를 x : 400px, y : 0px 로 좌표이동합니다.
 */
 // Answer 6.
-
+var scrollEl = document.getElementById('scroll');
+scrollEl.classList.add('scroll');
+setTimeout(function() {
+    scrollEl.scrollTo(400, 0);
+}, 10);
+// 최초에 문서를 로드했을 때 스크롤 발생이 되지 않을 수 있다.
+// 0.001초 지연 후 실행.
 
 
 /*
@@ -66,7 +108,14 @@ Quest 7.
 3. 1(순서) 요소의 자식 중 세번째 요소(.row)를 삭제합니다.
 */
 // Answer 7.
-
+var articleEl = document.getElementById('article');
+// console.log(articleEl);
+// articleEl.firstElementChild.classList.add('red');
+// articleEl.removeChild(articleEl.lastElementChild);
+var rowEls = articleEl.getElementsByClassName('row');
+rowEls[0].classList.add('red');
+rowEls[2].remove();
+// articleEl.removeChild(rowEls[2]);
 
 
 /*
@@ -88,5 +137,19 @@ Quest 8.
 7. enterName 함수를 호출합니다.
 */
 // Answer 8.
-
-
+function enterName() {
+    var name = prompt('이름을 입력해주세요.');
+    // console.log(name);
+    // 취소 - null
+    if (name === null) {
+        console.log('입력이 취소되었습니다.');
+        return;
+    }
+    if (name === '') {
+        alert('이름을 정확히 입력해주세요.');
+        enterName();
+    } else {
+        document.write(name);
+    }
+}
+enterName();
