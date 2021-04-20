@@ -169,8 +169,12 @@ function onClickBtnReset(e) {
     if (result === '100') {
         // userIdElValue.reset(); -> 오류
         // userIdElValue = ''; -> 오류
-        userIdEl.value = '';
-        userPassEl.value = '';
+        // userIdEl.value.reset(); -> 오류
+
+        // userIdEl.value = ''; // -> 정상 작동
+        // userPassEl.value = ''; // -> 정상 작동
+        userIdEl.value = null; // -> 정상 작동
+        userPassEl.value = null; // -> 정상 작동
     }
 }
 btnResetEl.addEventListener('click', onClickBtnReset);
