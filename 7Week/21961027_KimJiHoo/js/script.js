@@ -23,7 +23,7 @@ var btnStudent_Name = document.querySelector('#btn-student-name');
 function OnClickBtn_StudentNumber(){
 
     document.querySelector('#student-number').innerHTML = "21961027"; // span #student-number요소를 찾아 내부에 자신의 학번이 입력되도록 만듦.
-    console.log("학번이 입력되었습니다."); // 메세지 출력
+    alert("학번이 입력되었습니다."); // 경고창으로 메세지 출력
 }
 
 btnStudent_Number.addEventListener('click',OnClickBtn_StudentNumber);
@@ -34,7 +34,7 @@ btnStudent_Number.addEventListener('click',OnClickBtn_StudentNumber);
 function OnClickBtn_StudentName(){
 
     document.querySelector('#student-name').innerHTML = "김지후"; // span #student-name요소를 찾아 내부에 자신의 이름이 입력되도록 만듦.
-    console.log("이름이 입력되었습니다."); // 메세지 출력
+    alert("이름이 입력되었습니다."); // 경고창으로 메세지 출력
 }
 
 btnStudent_Name.addEventListener('click',OnClickBtn_StudentName);
@@ -159,10 +159,10 @@ function OnClickBtn_Apply(e){
     // 확인 = true, 취소 = false
 
     if(promptApply === true){ // 사용자가 확인을 선택한 경우
-        console.log("가입을 환영합니다!"); // 환영 메세지 출력
+        alert('가입을 환영합니다!'); // 환영 메세지 경고창으로 출력
     }
     else { // 사용자가 취소를 선택한 경우
-        console.log("가입을 취소했습니다."); // 가입 취소 메세지 출력
+        alert('가입을 취소했습니다.'); // 가입 취소 메세지 출력
     }
     
 }
@@ -244,7 +244,7 @@ function OnClickBtn_CheckOdd() {
         return; // 함수를 종료
     }
     if (promptCheckOdd === '') {
-        alert('숫자를 정확히 입력해 주세요');
+        alert('숫자를 정확히 입력해 주세요'); // 아무 것도 입력하지 않으면 메세지 출력
     }
 
     var toInt = Number(promptCheckOdd); // 입력받은 문자열 값(기본 문자열)을 숫자 자료형으로 변환시켜줌
@@ -351,11 +351,13 @@ function OnClickBtn_Color(){
 
     sentences[clickCount].style = 'black'; // 현재 클릭획수의 글자는 검정색으로.
     clickCount++; // 글자색을 모두 바꾸고 나면 다음 글자의 색을 바꿀 수 있게끔 카운트를 1 더해줌.
-    console.log(clickCount); // 현재 클릭 횟수(순서)를 출력.
+    // console.log(clickCount); // 현재 클릭 횟수(순서)를 출력, 확인 후 주석 처리
 
     if (clickCount >= sentences.length) {
-        clickCount = 0; // 마지막 요소에 다다르면 클릭횟수를 초기화시켜서 루프가 돌게끔. 
+        clickCount = 0; // 마지막 요소에 다다르면 클릭횟수를 초기화시켜서 루프가 돌게끔.  
     }
+
+    // 색을 빨강색으로 모두 바꾼 뒤 특정 순번의 p만 검정색으로 바꾸어 주는 처리를 해서 이전 순번에서 검정색으로 변했던 p가 계속 검정색으로 남아있지 않게해줌.
 
 
     /*
@@ -394,7 +396,7 @@ Quest 10.
 var btnGo_Top = document.querySelector('#btn-go-top'); // 요소를 찾아 변수에 할당
 
 function OnClickBtn_Go_Top(){
-    // console.log("위로 올라가요");
+    // console.log("최상단으로 스크롤");
     window.scrollTo(0, 0); // 화면 좌측 상단 기준 0px, 0px 위치로 이동시키도록.
 }
 

@@ -36,7 +36,7 @@ for(var i = 0; i < 10; i++){
 
 html +='</div>';
 
-titleEl.innerHTML = html;
+titleEl.innerHTML = html; 
 
 // 이 과정을 innerText를 이용해 하면 태그들이 전부 문자열로 출력되어 버림.
 
