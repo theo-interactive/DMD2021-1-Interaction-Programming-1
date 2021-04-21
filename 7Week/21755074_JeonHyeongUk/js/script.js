@@ -201,9 +201,38 @@ Quest 7.
 */
 // Answer 7.
 
-/*
-var btnOdd = document.querySelector('button#btn-odd'); // button#btn-odd 요소를 찾아줄 변수를 선언합니다.
-*/
+var btn_Odd = document.querySelector('button#btn-odd'); // button#btn-odd 요소들을 찾기 위한 변수를 선언해줍니다.
+var div_OddResult = document.getElementById('div#odd-result'); // div#odd-result 요소들을 찾기 위한 변수를 선언해줍니다.
+var oddNum = ""; // 다이얼로그창에 숫자를 입력할때 순서대로 담아질 홀수들을 담을 blank 형태의 문자열 변수를 선언해줍니다.
+
+function onClickbtnOdd(e) { // ... 이벤트 핸들러를 할당합니다. 
+
+    e.preventDefault(); // 이벤트 디폴트 액션을 방지하는 속성을 사용합니다.
+
+    var DIYNum = prompt('숫자를 입력해주세요'); // -> 1(순서) 이벤트 호출 시 '숫자를 입력해주세요.' 라는 문구와 입력창이 포함된 다이얼로그창을 출력합니다.
+
+    for (i = 0; i <= DIYNum; i++) { // 일단은 순서를 살펴보면, 예시 상의 인풋되는 숫자드의 규칙을 토대로 보면 입력 숫자와 같거나 보다 작은, 정수 1부터의 정수형 홀수들이 따라오게 되는 것을 확인할 수 있고 이를 토대로 조건문을 구성해보겠습니다.
+
+        if (i % 2 !== 0) { // 홀수의 조건을 그대로 중첩 if문의 조건으로 채용을 한 다음,
+
+            oddNum += i; // 홀수를 담아주는 변수에 따라오게 된 모든 홀수들을 넣어줍니다.
+
+            if (i < DIYNum - 1) { // 또 한번 if문을 중첩으로 써보도록 하겠습니다. 이번에는 예시상에서 확인하면 반점, 온점들이 따라오게 되는 것을 확인할 수 있기 때문입니다. 입력숫자보다 작은 홀수들을 불러오는 조건을 작성하여,
+
+                oddNum += ', '; // 조건에 해당하는 모든 홀수들의 뒤에 반점이 따라붙게 되어지고,
+
+            } else { // 타 잉여 조건의 경우에는 가장 마지막 순서에 배치되는 최대값의 홀수에 대한 경우로 이어지겠지요?
+
+                oddNum += '.'; // 그런 경우에는 온점을 붙여주도록 함으로써, 예시상의 문자열 연산 배열 형태의 구성을 완료했습니다.
+            }
+        }
+    }
+    divId.innerHTML = oddNum; // innerHTML 속성을 이용하여 구성된 결과값이 할당될 수 있도록 합니다.
+
+}
+btn_Odd.addEventListener('click', onClickbtnOdd); // 이벤트 리스너 속성을 사용하여 클릭 시에 실행될 수 있게 구현하도록 합니다.
+
+
 
 /*
 Quest 8.
