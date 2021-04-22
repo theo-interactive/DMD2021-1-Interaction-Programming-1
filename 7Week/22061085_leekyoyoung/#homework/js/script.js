@@ -66,6 +66,26 @@ function onClickBtn4(e) {
 }
 btn4El.addEventListener('click', onClickBtn4);
 
+
+// answer
+// function onClickbtnCheckId(e) {
+//     e.preventDefault();
+//     var userIdEl = document.getElementById('user_id');
+//     // console.log(userIdEl);
+//     // 속성을 찾는 방법
+//     var value = userIdEl.getAttribute('value'); // 문서상에 기입된 초기 속성값.
+//     // console.log(value, value.length);
+//     var msg = `input#user_id - value 속성 값의 문자열 개수는 ${value.length} 입니다.`;
+//     console.log(msg);
+//     // input 의 value
+//     value = userIdEl.value; // input, textarea, select ... - 현재 상태의 값(value)를 받아온다
+//     // console.log(value, value.length);
+//     msg = 'input#user_id - value 속성 값의 문자열 개수는' + value.length + '입니다.';
+//     console.log(msg);
+// }
+
+// var btnCheckId = document.querySelector('button#btn-check-id');
+// btnCheckId.addEventListener('click', onClickbtnCheckId);
 /*
 Quest 4.
 1. button#btn-cancel 요소에 클릭 이벤트를 추가하고 이벤트 핸들러를 할당합니다.
@@ -179,6 +199,22 @@ function onClickBtn11(e) {
 }
 btn11El.addEventListener('click', onClickBtn11);
 
+// answer
+// function onClickBtnAddCity(e) {
+//     var newCity = prompt('도시명을 입력하세요.');
+//     if (newCity !== null && newCity !== '') {
+//         // console.log(newCity);
+//         var newItem = document.createElement('li');
+//         newItem.innerText = newCity;
+//         // console.lof(newItem);
+//         var cityListEl = document.querySelector('ul#city-list');
+//         cityListEl.appendChild(newItem);
+//         // console.lof(cityListEl);
+//     }
+// }
+
+// var btnAddCity = document.querySelector('button#btn-add-city');
+// btnAddCity.addEventListener('click', onClickBtnAddCity)
 /*
 Quest 9.
 1. button#btn-color 요소에 클릭 이벤트를 추가하고 이벤트 핸들러를 할당합니다.
@@ -216,24 +252,27 @@ function onClickBtn9(e) {
     e.preventDefault();
 }
 btn9El.addEventListener('click', onClickBtn9)
-// var btnColorEl = document.querySelector('button#btn-color');
-// var pSentenceEls = document.querySelectorAll('p.sentence');
-// var count = 0;
 
-// function onClickBtnColor() {
-//     for (i = 0; i < pSentenceEls.length; i++) {
-//         pSentenceEls[i].style.color = 'red';
-//         if (i === count) {
-//             pSentenceEls[i].style.color = 'black';
+// answer
+// var currentId = 0;
+// function onclickBtnColor(e) {
+//     var sentenceEls = document.getElementsByClassName('sentence');
+//     // console.log(sentenceEls);
+//     for (var i = 0; i < sentenceEls.length; i++) {
+//         var sentenceEl = sentenceEls[i];
+//         sentenceEl.style.color = 'red';
+//         if (i === currentId) {
+//             sentenceEl.style.color = 'black';
 //         }
 //     }
-//     count++;
-//     console.log(count); // -> 1, 2, 3, 4, 1, 2, ... 반복.
-//     if (count === pSentenceEls.length) {
-//         count = 0;
+//     currentId++;
+//     if(currentId >= sentenceEls.length){
+//         currentId = 0;
 //     }
 // }
-// btnColorEl.addEventListener('click', onClickBtnColor);
+
+// var btnColor = document.querySelector('button#btn-color');
+// btnColor.addEventListener('click', onclickBtnColor);
 /*
 Quest 10.
 1. button#btn-go-top 요소에 클릭 이벤트를 추가하고 이벤트 핸들러를 할당합니다.
