@@ -81,3 +81,14 @@ button + button{margin-left:10px}
 	background-color: black;
 	color: white
 }
+
+input[name=name] {
+	transition: all 200ms ease-in-out
+}
+
+.active {
+	border: 1px solid red;
+	outline: none;
+	padding: 20px;
+	/* transition: all 200ms ease-in-out; */
+}
