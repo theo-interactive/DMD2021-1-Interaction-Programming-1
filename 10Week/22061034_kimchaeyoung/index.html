@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title> 선우정아 </title>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<body>
+
+    <h1 class="blind">Layout</h1>
+    <nav id="global-nav">
+
+        <h1 class="blind">Menu</h1>
+        <b id="btn-menu" class="btn-menu"><span></span></b>
+        <div id="side-menu" class="side-menu">
+            <ul>
+                <li>
+                    <a href="#menu1"><span> Profile </span></a>
+                </li>
+                <li>
+                    <a href="#menu2"><span> Song </span></a>
+                </li>
+                <li>
+                    <a href="#menu3"><span> Music Video </span></a>
+                </li>
+                <li>
+                    <a href="#menu4"><span> SNS </span></a>
+                </li>
+            </ul>
+
+            <b id="btn-close" class="btn-close"><span></span></b>
+        </div>
+
+        
+        <div class="gn-content">
+            <ul class="gn-list">
+                <li>
+                    <a href="#menu1"><span> Profile </span></a>
+                </li>
+                <li>
+                    <a href="#menu2"><span> Song </span></a>
+                </li>
+                <li>
+                    <a href="#menu3"><span> Music Video </span></a>
+                </li>
+                <li>
+                    <a href="#menu4"><span> SNS </span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="main">
+        <section class="section">
+            <div class="section-content">
+                <video autoplay="autoplay" loop="loop" muted>
+                    <source src="./video/background.mp4" type="video/mp4">
+                    당신의 브라우저가 영상을 지원하지 않습니다.
+                </video>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-content">
+                <h2> <img src="./img/고양이.jpg">
+                    <P> CAT(FEAT.IU) </P>
+                </h2>
+            </div>
+        </section>
+        <section class="section">
+            <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/AKSpQUPbb74"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                        <div class="text"> [MV] Sunwoo Jung A (선우정아) _ C A T (Feat.IU) (고양이 (Feat.아이유)) </div>
+                    </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/GOS6C2jXTa8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="text"> 선우정아 (SWJA) - 도망가자 (Run With Me) [MV] </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/exfv7thz_nM"
+                    title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="text"> [MV] Sunwoojunga(선우정아) _ Idle Idle(뒹굴뒹굴) </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/yzDCgArwlEk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                        <div class="text"> 선우정아 (Sunwoojunga) - 구애 (求愛) MV </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-content">
+                <h2> <a href="https://www.facebook.com/swjaswja/?fref=ts" target="_blank"> <img src="./img/페이스북.png">
+                </a>
+                    <a href="https://www.instagram.com/sunwoojunga_official/" target="_blank"> <img
+                        src="./img/인스타그램.png">
+                    </a> <a href="https://www.youtube.com/channel/UC1vXYaW1fjBrncwFoOqHaaQ" target="_blank"> <img
+                        src="./img/유튜브.png"> </a>
+                </h2>
+            </div>
+        </section>
+    </div>
+    <footer id="global-footer">
+        <div class="gf-content">
+            <h2> © SUNWOOJUNGA CORPORATION. All rights reserved. </h2>
+        </div>
+    </footer>
+    <div class="notice"></div>
+</body>
+
+</html>
+<script type="text/javascript" src="./js/script.js"></script>
