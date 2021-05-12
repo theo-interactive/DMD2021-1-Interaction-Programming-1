@@ -1,0 +1,161 @@
+/* 구글 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 초기화코드 태그 */
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap{
+    /* width: 1200px; */
+    max-width: 1600px;
+    min-width: 1100px;
+    margin: 0px auto;
+}
+header{
+    padding: 20px;
+}
+header>ul>li{
+    list-style: none;
+    float: left; /*  왼쪽으로 흐르듯이 */
+    border-right: 1px solid #999999;
+    /* margin: 0px 20px; 상하 좌우 */
+    padding: 0px 10px;
+}
+header>ul>li:last-child{
+    border: none; /* 경계선 없음 */
+}
+header>h1{
+    margin: 5px 0px;
+}
+header>div{
+    margin: 14px 0px;
+}
+header>ul{
+    padding: 0px;
+    margin: 16px 80px;
+}
+nav>ul>li{
+    list-style: none;
+    float: left;
+    padding: 0px 10px;
+}
+nav>ul{
+    padding: 0px;
+    margin: 16px 96px;
+}
+nav>h2{
+    margin: 8px 0px;
+}
+nav{
+    background-color: #eee;
+    padding: 0px 20px;
+}
+.float_left{
+    float: left;
+}
+.float_right{
+    float: right;
+}
+.content>section{
+    width: 100%;
+    height: 1080px;
+    padding: 50px;
+}
+.content>section>div{
+    width: 100%;
+    /* margin: 0px auto; */
+}
+.content>section:nth-child(1){
+    background-color: #98f;
+}
+.content>section:nth-child(2){
+    background-color: #95f;
+}
+.content>section:nth-child(3){
+    background-color: #92f;
+}
+.content>section:nth-child(4){
+    background-color: #89f;
+}
+.content h3 /* .content>section>div>h3 */{
+    color: white;
+    font-size: 30px;
+}
+.content_part{
+    float: left;
+    width: 300px;
+    margin: 0px 10px;
+}
+.content_part img{
+    width: 300px;
+    height: 200px;
+}
+.content_part dd{
+    margin: 0px;
+}
+.content_part dt{
+    font-weight: bold;
+    font-size: 19px;
+    margin: 10px 0px;
+}
+.content_part dl{
+    margin: 0px;
+}
+footer{
+    background-color: #333;
+    padding: 20px;
+    color: #888;
+    font-weight: bold;
+}
+footer li{
+    float: left;
+    list-style: none;
+    padding: 0px 10px;
+}
+/* footer ul: :first-child li{} */
+#footer_left li{
+    border-right: solid 1px gray;
+}
+#footer_left li:last-child{
+    border: none;
+}
+footer ul{
+    padding: 0px;
+}
+/* footer>div{
+    float: left;
+} */
+.clearfix::after{ /* float left 이상증상 방지 */
+    content: ""; /* 특정 브라우저 이상증상 해결용 */
+    clear: both; /* float 제거 : 양쪽(둘다) */
+    display: table; /* 특정 브라우저 이상증상 해결용 */
+}
+
+
+/* 미디어쿼리 데스크탑에서 모바일 */
+/* 데스크탑 1920 */
+@media screen and (max-width: 1920px) {
+
+}
+/* 데스크탑 1440 */
+@media screen and (max-width: 1440px) {
+
+}
+/* 아이패드 가로 / 렙탑컴퓨터 */
+@media screen and (max-width: 1024px) {
+
+}
+/* 아이패드 세로 */
+@media screen and (max-width: 768px) {
+
+}
+/* 아이폰 678 플러스 */
+@media screen and (max-width: 414px) {
+
+}
+/* 아이폰 678 */
+@media screen and (max-width: 375px) {
+
+}
