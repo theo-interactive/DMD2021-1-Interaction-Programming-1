@@ -10,6 +10,22 @@ html{overflow:hidden;min-height:100vh;background-color:#fff;color:#333;font-fami
 body{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}
 input[type=checkbox]{-webkit-appearance:none;-moz-appearance:none;appearance:none}
 input[type=checkbox]::-ms-check{display:none}
+
 h1#title{margin:0;padding:0;font-size:3.000rem;font-weight:700;line-height:3.500rem}
 .desc{font-size:1.667rem;line-height:2.167rem}
 h1#title + .desc{margin-top:20px}
+
+/* OS 시스템을 통한 모드 변환 */
+@media (prefers-color-scheme: dark) {
+    /* 다크모드 */
+    body{background-color:#222222}
+    h1#title{color: #ffffff}
+    .desc{color: #ffffff}
+}
+
+@media (prefers-color-scheme: light) {
+    /* 라이트 모드 */
+    body{background-color:#ffffff}
+    h1#title{color: #222222}
+    .desc{color: #222222}
+}
