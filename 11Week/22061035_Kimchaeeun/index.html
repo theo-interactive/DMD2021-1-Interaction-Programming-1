@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1 class="blind">Tab Menu Layout</h1>
+
+    <section id="banner"></section>
+
+    <div class="mode">
+        <ul>
+            <li><a href="#light" class="light"><span>&nbsp;</span></a></li>
+            <li><a href="#dark" class="dark"><span>&nbsp;</span></a></li>
+            <li><a href="#yellow" class="yellow"><span>&nbsp;</span></a></li>
+            <li><a href="#green" class="green"><span>&nbsp;</span></a></li>
+        </ul>
+    </div>
+
+    <div id="tab-menu" class="tab-menu">
+        <ul>
+            <li><a href="#" class="selected"><span>Image Gallery</span></a></li><li>
+            <a href="#"><span>Video</span></a></li><li>
+            <a href="#"><span>Article</span></a></li><li>
+            <a href="#"><span>More Info</span></a></li>
+        </ul>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab-content selected">
+            <ul id="list">
+                <li><a href="#"><img src="./img/img1.jpg" alt="image 1"></a></li>
+                <li><a href="#"><img src="./img/img2.jpg" alt="image 2"></a></li>
+                <li><a href="#"><img src="./img/img3.jpg" alt="image 3"></a></li>
+                <li><a href="#"><img src="./img/img4.jpg" alt="image 4"></a></li>
+            </ul>
+        </div>
+        <div class="tab-content"><div class="video"><video src="./video/video.mp4" type="video/mp4" autoplay controls loop muted></video></div></div>
+        <div class="tab-content">
+            <table>
+                <tr>
+                    <td>
+                        <strong>레몬</strong>
+                        <p>
+                            노란색 타원형 열매의 과즙 (레몬즙), 과육, 껍질(제스트) 등이 요리에 널리 쓰이며, 청소 등에도 사용된다. 레몬즙은 5~6% 시트르산을 함유하며 산성을 띠고, pH는 2.2 정도이다.
+                        </p>
+                        <p>
+                            단맛이 적고 강한 신맛이 나며, 특히 고기류와 생선류의 염기성인 비린내를 제거하고 맛을 살리기 위해 사용하는 경우가 많다. 또한 레모네이드 등의 음료수를 만들거나, 소주 등 술에 레몬즙을 섞어 칵테일 등을 만들기도 한다.
+                        </p>
+                    </td>
+                    <td rowspan="2"><img src="./img/img1.jpg" alt=""></td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab-content">
+            <div class="moreInfo">
+                <p class="bold">22061035 김채은</p>
+                <p>Digital Media Design</p>
+                <p>경기도 의왕시 내손동 계원대학로 66 KR</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div id="cursor-dot">&nbsp;</div>
+    <div id="cursor-bg">&nbsp;</div>
+
+    <script type="text/javascript" src="./vendor/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

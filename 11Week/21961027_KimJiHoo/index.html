@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>21961027_KimJiHoo</title>
+    <link rel="stylesheet" href="./css/common.css" />
+</head>
+
+<body>
+    <h1 class="blind">Tab Menu</h1>
+    <h1 id="title"><span>Instagram</span></h1>
+
+    <div class="mode">
+        <ul>
+            <li class="selected"><a href="#light" class="light"><span>&nbsp;</span></a></li>
+            <li>
+                <a href="#dark" class="dark"><span>&nbsp;</span></a>
+            </li>
+            <li>
+        </ul>
+        <label class="switch"><input type="checkbox" name="switch"><span>&nbsp;</span></label>
+    </div>
+
+
+
+    <div id="tab-menu" class="tab-menu">
+        <ul>
+            <li><a href="#" class="selected"><span>Welcome!</span></a></li>
+            <li>
+                <a href="#"><span>Info</span></a>
+            </li>
+            <li>
+                <a href="#"><span>New Service</span></a>
+            </li>
+            <li>
+                <a href="#"><span>Buisness</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-container">
+        <div class="tab-content selected">
+            <img src="./img/img_01.jpg">
+            <p>
+                <span id="text">Instagram</span>과 함께 소중한 사람과 좋아하는 콘텐츠에 더 가까이 다가가세요
+            </p>
+        </div>
+        <div class="tab-content">
+            <img src="./img/img_02.jpg">
+            <p>
+                <span id="text">Instagram</span>은 모두에게 안전하고
+                <br>
+                따듯한 커뮤니티를 만들기 위해 최선을 다하고 있습니다.
+            </p>
+        </div>
+        <div class="tab-content">
+            <img src="./img/img_03.jpg">
+            <p>
+                <span id="text">Instagram</span>의 최신 기능을 사용하여
+                <br>
+                새로운 방식으로 자신을 표현해보세요.
+                <br>
+                더 많은 사람에게 도달하고, 영향력을 높이고, 독특하고 매력적인 콘텐츠를 만들어보세요.
+            </p>
+        </div>
+        <div class="tab-content">
+            <img src="./img/img_04.jpg">
+            <p>
+                <span id="text">Instagram</span>으로 다양한 글로벌 커뮤니티와 함께
+                <br>브랜드를 공유하고 성장시켜보세요.
+            </p>
+        </div>
+    </div>
+
+    <div id="cursor-dot">&nbsp;</div>
+    <div id="cursor-bg">&nbsp;</div>
+    <div id="progress"><span>&nbsp;</span></div>
+
+    <script type="text/javascript" src="./js/Mouse.js"></script>
+    <script type="text/javascript" src="./js/Tab.js"></script>
+    <script type="text/javascript" src="./js/Theme.js"></script>
+    <script src="./vendor/gsap/gsap.min.js"></script>
+</body>
+
+</html>
