@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>21861025_Kimsubin</title>
+    <link rel="stylesheet" href="./css/common.css"/>
+    <!-- <link rel="stylesheet" href="./css/Theme_style.css"/> 
+    <link rel="stylesheet" href="./css/Tab.style.css"/> 
+    <link rel="stylesheet" href="./css/Mouse.css"/>  -->
+</head>
+<body>
+<h1 class="blind">Tab Menu</h1>
+<h1 id="title">Theme <span></span></h1>
+<div class="mode">
+    <ul>
+        <li class="selected"><a href="#light" class="light"><span>&nbsp;</span></a></li><li>
+            <a href="#dark" class="dark"><span>&nbsp;</span></a></li><li>
+            <a href="#red" class="red"><span>&nbsp;</span></a></li><li>
+            <a href="#green" class="green"><span>&nbsp;</span></a></li>
+    </ul>
+    <label class="switch"><input type="checkbox" name="switch"><span>&nbsp;</span></label>
+</div>
+
+
+
+<div id="tab-menu" class="tab-menu">
+    <ul>
+        <li><a href="#" class="selected"><span>Toy Story 1</span></a></li><li>
+            <a href="#"><span>Toy Story 2</span></a></li><li>
+            <a href="#"><span>Toy Story 3</span></a></li><li>
+            <a href="#"><span>Toy Story 4</span></a></li>
+    </ul>
+</div>
+<div class="tab-container">
+    <div class="tab-content selected">
+        <img src="./img/toy1.jpeg">
+        <h1>토이 스토리 1</h1>
+        <h2>개봉일 : 1995.12.30</h2>
+        <h3>등급 : 전체 관람가</h3>
+        <h4>장르 : 애니메이션, 모험, 코미디, 가족, 판타지</h4>
+        <h5>러닝타임 : 77분</h5>
+        <h6>배급 : 브에나비스타 코리아</h6>
+
+        <h7>줄거리</h7>
+        <p>
+            우디는 6살 남자아이 앤디가 가장 아끼는 카우보이 인형이다...어느날 날개와 디지털 음성을 가진 최신 장난감 버즈가 찾아오는데<br>
+            과연 우디는 최신 장난감 버즈와 함께 앤디의 진정한 친구가 될 수 있을 것인가...
+        </p>
+    </div>
+    <div class="tab-content">
+        <img src="./img/toy2.jpeg">
+        <h1>토이 스토리 2</h1>
+        <h2>개봉일 : 1999.12.18</h2>
+        <h3>등급 : 전체 관람가</h3>
+        <h4>장르 : 애니메이션, 모험, 코미디, 가족, 판타지</h4>
+        <h5>러닝타임 : 92분</h5>
+        <h6>배급 : 브에나비스타 코리아</h6>
+
+        <h7>줄거리</h7>
+        <p>
+            우디는 팔려나가는 위지를 구출하기 위해 현관으로 가다가 불행히 앤디의 집앞을 지나던 토이 수집광 알에게 붙잡히고야 마는데...<br>
+            과연 우디는 토이 수집광의 손아귀에서 벗어나 다시 친구들의 곁으로 돌아올 수 있을 것인가...
+        </p>
+    </div>
+    <div class="tab-content">
+        <img src="./img/toy3.jpeg">
+        <h1>토이 스토리 3</h1>
+        <h2>개봉일 : 2010.08.05</h2>
+        <h3>등급 : 전체 관람가</h3>
+        <h4>장르 : 애니메이션, 모험, 코미디, 가족, 판타지</h4>
+        <h5>러닝타임 : 102분</h5>
+
+        <h7>줄거리</h7>
+        <p>
+            장난감의 운명을 거부한 새로운 친구 '포키'와 우디를 찾기 위한 모험이 계속된다.<br>
+            버즈와 친구들은 과연 포키와 우디를 무사히 찾을수 있을까...
+        </p>
+    </div>
+    <div class="tab-content">
+        <img src="./img/toy4.jpeg">
+        <h1>토이 스토리 4</h1>
+        <h2>개봉일 : 2019.06.20</h2>
+        <h3>등급 : 전체 관람가</h3>
+        <h4>장르 : 애니메이션, 모험, 코미디, 가족, 판타지</h4>
+        <h5>러닝타임 : 100분</h5>
+        <h6>배급 : 월트 디즈니 컴퍼니 코리아</h6>
+
+        <h7>줄거리</h7>
+        <p>
+            장난감의 운명을 거부한 새로운 친구 <strong>'포키'</strong>와 우디를 찾기 위한 모험이 계속된다.<br>
+            버즈와 친구들은 과연 포키와 우디를 무사히 찾을수 있을까...
+        </p>
+    </div>
+</div>
+
+
+<div id="cursor-dot">&nbsp;</div>
+<div id="cursor-bg">&nbsp;</div>
+<div id="progress"><span>&nbsp;</span></div>
+
+<script type="text/javascript" src="./js/Mouse.js"></script>
+<script type="text/javascript" src="./js/Tab.js"></script>
+<script type="text/javascript" src="./js/Theme.js"></script>
+<script type="text/javascript" src="./vendor/gsap/gsap.min.js"></script>
+</body>
+</html>
