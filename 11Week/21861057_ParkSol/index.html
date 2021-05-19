@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>21861057_ParkSol</title>
+    <link rel="stylesheet" href="./css/style.css"/> 
+</head>
+<body>
+
+<h1 class="blind">Tab Menu</h1>
+<div id="tab-menu" class="tab-menu">
+    <ul>
+        <li><a href="#" class="selected"><span>Han River</span></a></li><li>
+            <a href="#"><span>Sky</span></a></li><li>
+            <a href="#"><span>Cherry Blossom</span></a></li><li>
+            <a href="#"><span>Pizza</span></a></li>
+    </ul>
+</div>
+<div class="tab-container">
+    <div id="content1" class="tab-content selected">
+        <img src="images/1.jpg">
+        <p>
+            내가 찍은 사진 1, 한강.<br>
+            <br>
+            한강을 좋아한다.<br>
+            한강은 언제 가도 아름답다.<br>
+            서울이라는 복잡한 도시에서 여유를 느낄 수 있는 아주 좋은 장소다.<br>
+            이 강과 멀지않은 곳에 산다는 것이 행복하다.
+        </p>
+    </div>
+    <div id="content2" class="tab-content">
+        <img src="images/2.jpg">
+        <p>
+            내가 찍은 사진 2, 하늘.<br>
+            <br>
+            미세먼지가 심한 요즘, 맑은 하늘을 보기가 힘들다.<br>
+            그래서인지 가끔 공기가 좋은 날에는<br>
+            무심코 사진을 찍게 된다.<br>
+            항상 하늘이 이렇게 파랗다면 좋겠다.
+        </p>
+    </div>
+    <div id="content3" class="tab-content">
+        <img src="images/3.jpg">
+        <p>
+            내가 찍은 사진 3, 벚꽃.<br>
+            <br>
+            봄은 순식간에 지나간다.<br>
+            벚꽃도 순식간에 사라진다.<br>
+            그렇기에 벚꽃 사진은 꽤나 소중하다.<br>
+            18년의 봄은 신입생이었고,<br>
+            19년의 봄은 휴학생이었으며,<br>
+            20년의 봄은 군인이었고,<br>
+            21년의 봄은 복학생이다.<br>
+            앞으로 또 다른 봄을 맞이할 날들이 기대된다.<br>
+        </p>
+    </div>
+    <div id="content4" class="tab-content">
+        <img src="images/4.jpg">
+        <p>
+            내가 찍은 사진 4, 피자.<br>
+            <br>
+            클래식한 걸 좋아한다.<br>
+            페퍼로니와 하와이안 피자를 좋아해서,<br>
+            둘 다 종종 먹는 편이다.<br>
+            호불호 갈리는 음식을 당당히 호라고 말할 수 있어 좋다.<br>
+        </p>
+    </div>
+</div>
+<h1 id="title" class="blind">Theme <span></span></h1> 
+<div class="mode">
+    <ul>
+        <li class="selected"><a href="#light" class="light"><span>&nbsp;</span></a></li><li>
+            <a href="#dark" class="dark"><span>&nbsp;</span></a></li><li>
+            <a href="#blue" class="blue"><span>&nbsp;</span></a></li><li>
+            <a href="#yellow" class="yellow"><span>&nbsp;</span></a></li>
+    </ul>
+    <label class="switch"><input type="checkbox" name="switch"><span>&nbsp;</span></label>
+</div>
+<div id="cursor-dot">&nbsp;</div>
+<div id="cursor-bg">&nbsp;</div>
+<div id="progress"><span>&nbsp;</span></div>
+<script type="text/javascript" src="./vendor/gsap/gsap.min.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
