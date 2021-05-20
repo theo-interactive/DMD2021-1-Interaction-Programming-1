@@ -8,30 +8,94 @@
 .blind{display:none!important;visibility:hidden!important;position:absolute;margin:0;padding:0;clip:rect(0 0 0 0);pointer-events:none}
 html{overflow:hidden;min-height:100vh;color:#333;font-family:"Noto Sans KR",sans-serif;font-size:12px;font-weight:400;line-height:1.5rem}
 body{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.gallery{width:800px}
-.view{overflow:hidden;position:relative;width:800px;height:500px}
-.view-container{position:absolute;top:0;left:0;width:100%;height:100%}
-.view-container::after{content:'';display:block;position:relative;
-    clear:both
-    /* 요소의 정렬이 float 으로 구성되어 있을 때 끝나는 부분에
-       clear 의 속성이 부여되어야 영역의 사이즈를 찾아낼 수 있다 */
-}
-/*
-<div>
-    <div - float:left />
-    <div - float:left />
-    <div - float:left />
-    <div - float:left />
-    ::after - clear:both (부모 div 의 영역이 하위 항목까지 모두 인식됨)
-</div>
-*/
 
-.view-item{position:relative;float:left;width:100%}
-.view-item img{display:block;width:100%}
-.list{display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;width:100%;margin:0;padding:30px 20px;list-style:none}
-.list li{width:25%;padding-right:10px;padding-left:10px;flex:1}
-.list li a{overflow:hidden;display:block;position:relative}
-.list li a::after{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:2px solid #242424;-webkit-transform:scale3d(1.08,1.08,1.08);-moz-transform:scale3d(1.08,1.08,1.08);-o-transform:scale3d(1.08,1.08,1.08);-ms-transform:scale3d(1.08,1.08,1.08);transform:scale3d(1.08,1.08,1.08);-webkit-transition:-webkit-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-moz-transition:-moz-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-o-transition:-o-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-ms-transition:-ms-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);transition:transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190)}
-.list li.selected a{cursor:default}
-.list li a:hover::after,.list li.selected a::after{-webkit-transform:scale3d(1.0,1.0,1.0);-moz-transform:scale3d(1.0,1.0,1.0);-o-transform:scale3d(1.0,1.0,1.0);-ms-transform:scale3d(1.0,1.0,1.0);transform:scale3d(1.0,1.0,1.0);-webkit-transition:-webkit-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-moz-transition:-moz-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-o-transition:-o-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-ms-transition:-ms-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);transition:transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955)}
-.list li img{display:block;width:100%}
+.gallery{
+    width:800px;
+}
+.gallery .view{
+    overflow:hidden;
+    position:relative;
+    /*
+    하위 항목이 absolute 일 때, 좌표 기준 지점을 해당 요소부터 설정.
+    */
+    width:100%;
+    height:500px
+}
+.gallery .view .view-container{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%
+}
+.gallery .view .view-container::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.gallery .view .view-item{
+    float:left;
+}
+.gallery .view .view-item img{
+    display:block;
+    width:100%
+}
+
+.gallery ul.list{
+    display:flex;
+    width:100%;
+    margin:0;
+    padding:0 10px;
+    list-style:none
+}
+
+.gallery .view + ul.list{
+    margin-top:20px;
+}
+
+.gallery ul.list li{
+    width:25%;
+    padding-right:10px;
+    padding-left:10px;
+    flex:1;
+}
+.gallery ul.list li a{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:100%;
+}
+.gallery ul.list li.selected a{
+    cursor:default;
+}
+
+.gallery ul.list li a::after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:2px solid #000000;
+    pointer-events:none;
+    transform:scale3d(1.08, 1.08, 1.08);
+    -webkit-transform:scale3d(1.08, 1.08, 1.08);
+    -moz-transform:scale3d(1.08, 1.08, 1.08);
+    -ms-transform:scale3d(1.08, 1.08, 1.08);
+    -o-transform:scale3d(1.08, 1.08, 1.08);
+    transition:transform 280ms ease-in-out;
+    -webkit-transition:-webkit-transform 280ms ease-in-out;
+    -moz-transition:-moz-transform 280ms ease-in-out;
+    -ms-transition:-ms-transform 280ms ease-in-out;
+    -o-transition:-o-transform 280ms ease-in-out
+}
+.gallery ul.list li.selected a::after,
+.gallery ul.list li a:hover::after{
+    transform:scale3d(1, 1, 1)
+}
+
+.gallery ul.list li img{
+    display:block;
+    width:100%;
+}
