@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>21961117_choiseungyeon_12Week</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<!-- 
+gallery
+- view (gallery images)
+-- view-container
+--- view-item (4개)
+---- img
+- ul -- list (gallery navigation)
+-- li (list item) (4개)
+--- a (button)
+---- img (thumbnail)
+-->
+
+
+
+<h1 class="blind">Image Gallery</h1>
+<div id="gallery" class="gallery">  
+        <div id="titletext">
+        <p>CITY NIGHT</p><br/>
+  </div>
+    <div class="view">
+        <div class="view-container">
+            <div class="view-item"><img src="./img/seoul.jpeg" alt="image 1" /></div>
+            <div class="view-item"><img src="./img/chicago.jpeg" alt="image 2" /></div>
+            <div class="view-item"><img src="./img/california.jpeg" alt="image 3" /></div>
+            <div class="view-item"><img src="./img/newyork.jpeg" alt="image 4" /></div>
+            <div class="view-item"><img src="./img/london.jpeg" alt="image 4" /></div>
+        </div>
+    </div>
+    <ul class="list">
+        <li class="selected"><a href="#"><img src="./img/text_seoul.png" alt="thumbnail 1"></a></li>
+        <li><a href="#"><img src="./img/text_chi.png" alt="thumbnail 2"></a></li>
+        <li><a href="#"><img src="./img/text_cali.png" alt="thumbnail 3"></a></li>
+        <li><a href="#"><img src="./img/text_new.png" alt="thumbnail 4"></a></li>
+        <li><a href="#"><img src="./img/text_lon.png" alt="thumbnail 4"></a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
