@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title> 내가 사랑하는 이동욱 갤러리 </title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<!-- 
+gallery
+- view (gallery images)
+-- view-container
+--- view-item (4개)
+---- img
+- ul -- list (gallery navigation)
+-- li (list item) (4개)
+--- a (button)
+---- img (thumbnail)
+-->
+<h1 class="blind">Image Gallery</h1>
+<div id="gallery" class="gallery">
+    <div class="view">
+        <div class="view-container">
+            <div class="view-item"><img src="./img/이동욱1.jpg" alt="image 1" /></div>
+            <div class="view-item"><img src="./img/이동욱2.jpg" alt="image 2" /></div>
+            <div class="view-item"><img src="./img/이동욱3.jpg" alt="image 3" /></div>
+            <div class="view-item"><img src="./img/이동욱4.jpg" alt="image 4" /></div>
+        </div>
+    </div>
+    <ul class="list">
+        <li class="selected"><a href="#"><img src="./img/이동욱1Thum.jpg" alt="thumbnail 1"></a></li>
+        <li><a href="#"><img src="./img/이동욱2Thum.jpg" alt="thumbnail 2"></a></li>
+        <li><a href="#"><img src="./img/이동욱3Thum.jpg" alt="thumbnail 3"></a></li>
+        <li><a href="#"><img src="./img/이동욱4Thum.jpg" alt="thumbnail 4"></a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
