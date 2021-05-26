@@ -1,0 +1,329 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* Modern Normalize */
+*,::after,::before{box-sizing:border-box}:root{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}hr{height:0}abbr[title]{text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{padding:0}progress{vertical-align:baseline}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+
+/* Layout */
+.blind{display:none!important;visibility:hidden!important;position:absolute;margin:0;padding:0;clip:rect(0 0 0 0);pointer-events:none}
+html{color:#333;font-family: 'Nanum Gothic', sans-serif;font-size:12px;font-weight:400;line-height:1.5rem}
+
+/* overflow:hidden;min-height:100vh; */
+/* 
+body{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center} */
+
+
+/* body{justify-content:center;} */
+
+/* flex box를 통해 비율맞츰 */
+/* justify : sample = 가운데로 맞춰짐. */
+
+
+/* .gallery{width:800px} 
+.view{overflow:hidden;position:relative;width:800px;height:500px}
+.view-container{position:absolute;top:0;left:0;width:100%;height:100%}
+.view-container::after{content:'';display:block;position:relative;clear:both}
+.view-item{position:relative;float:left;width:100%}
+.view-item img{display:block;width:100%}
+.list{display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;width:100%;margin:0;padding:30px 20px;list-style:none}
+.list li{width:25%;padding-right:10px;padding-left:10px;flex:1}
+.list li a{overflow:hidden;display:block;position:relative}
+.list li a::after{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:2px solid #242424;-webkit-transform:scale3d(1.08,1.08,1.08);-moz-transform:scale3d(1.08,1.08,1.08);-o-transform:scale3d(1.08,1.08,1.08);-ms-transform:scale3d(1.08,1.08,1.08);transform:scale3d(1.08,1.08,1.08);-webkit-transition:-webkit-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-moz-transition:-moz-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-o-transition:-o-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);-ms-transition:-ms-transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190);transition:transform 240ms cubic-bezier(0.550, 0.055, 0.675, 0.190)}
+.list li.selected a{cursor:default}
+.list li a:hover::after,.list li.selected a::after{-webkit-transform:scale3d(1.0,1.0,1.0);-moz-transform:scale3d(1.0,1.0,1.0);-o-transform:scale3d(1.0,1.0,1.0);-ms-transform:scale3d(1.0,1.0,1.0);transform:scale3d(1.0,1.0,1.0);-webkit-transition:-webkit-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-moz-transition:-moz-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-o-transition:-o-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);-ms-transition:-ms-transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955);transition:transform 120ms cubic-bezier(0.455, 0.030, 0.515, 0.955)}
+.list li img{display:block;width:100%}
+
+ */
+
+
+ *{
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, p img{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+h2{
+    font-family: 'Jua', sans-serif;
+
+    text-align: center;
+    padding: 100px;
+    font-size: 45px;
+    color: rgb(102, 66, 32);
+}
+
+h3{
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    color: rgb(102, 66, 32);
+}
+
+
+.blind{
+    display: none;
+}
+
+.wrap{
+    /* border: 3px solid red; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.moreInner{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#main{
+    /* border: 3px solid red; */
+    text-align: center;
+    margin-bottom: 100px;
+}
+#main img{
+    width: 100%;
+}
+
+#main p{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.intro{
+    background-color: rgb(255, 222, 36);
+
+    height: 400px;
+    padding: 90px 0;
+    margin-bottom: 100px;
+}
+
+.intro p {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+
+
+.gallery{
+    /* border: 1px solid red; */
+    /*갤러리 가로폭 지정*/
+    width: 900px;
+    /* 세로폭 지정*/
+    height: 289px;
+    margin: 40px auto;
+    display: block;
+
+}
+
+.gallery .view{
+    /* 마스킹 영역*/
+    overflow: hidden;
+    /* 하위 객체의 기준으로 잡음, 
+    하위항목이 absolute일 때 좌표 기준지점을 해당 요소부터 설정*/
+    position: relative;
+    /* 부모객체(갤러리)의 크기 그대로 상속*/
+    width: 100%;
+    height: 100%;
+
+}
+
+.gallery .view .view-container{
+    /* 공중에 띄워놓음, 상위객체가 relative가 아니고 이 객체가 absolute가
+    아니면 위치가 body 기준으로 잡힘 */
+    position: absolute;
+    top:0;
+    left:0;
+    /* width: 2000px; 이미지가 잘림 */
+    height: 100%;
+    
+} 
+
+.gallery .view .view-container::after{
+    content: '';
+    display: block;
+
+    /* 다음 객체의 좌표를 원활히 지정하기 위해 clear를 
+    끝나는 부분에 넣음. */
+    clear: both;
+}
+
+.gallery .view .view-item{
+    /* */
+    float: left;
+    position: relative;
+    /* article의 위치를 이미지에 붙이기 위해 포지션 설정! */
+}
+.gallery .view .view-item img{
+    display: block;
+    width: 100%;
+    /* border: 3px solid red; */
+    padding-right: 100px;
+} 
+.gallery .view .view-item .textSet{
+    /* border: 2px solid black; */
+    position: absolute;
+
+    right: 0;
+    /* background-color: white; */
+    padding: 20px;
+
+    width: 300px;
+    height: 100%;
+}
+
+.gallery .view .view-item article h3{
+    /* border: 2px solid black; */
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.gallery .view .view-item article h4{
+    /* border: 2px solid black; */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.gallery .view .view-item article p{
+    /* border: 2px solid black; */
+    font-size: 12px;
+    padding: 10px;
+}
+
+.gallery ul.list{
+    display:flex;
+    width: 100%;
+
+    /* 기본 패딩/마진 없애기 */
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    padding: 0 10px;
+}
+
+.gallery .view + ul.list{
+    /* view 다음의 ul.list에 마진 주기. */
+    margin-top: 20px;
+}
+
+
+.gallery ul.list li{
+    /* 각 요소가 비율 맞춰서 배치되도록. 
+    상위객체가 flex여야함. */
+    flex: 1;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* a 태그와 img 크기를 맞춰줌!! 중요.*/
+.gallery ul.list li a{
+    /* 아래 만든 라인을 마스킹 = 안 보이게 함. */
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.gallery ul.list li img{
+    display: block;
+    width: 100%;
+}
+
+.gallery ul.list li.selected a{
+    /* 선택된 이미지의 커서는 일반 커서로.*/
+    cursor: default;
+}
+
+
+.gallery ul.list li a::after{
+    /* 라인 만들기.*/
+    content: '';
+    display: block;
+    /* 만든 라인의 위치를 이미지 위로 올리기. */
+    position: absolute;
+    top:0;
+    left:0;
+    /* 가로세로폭은 상위객체 상속 */
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid black;
+    /* 활성화되지 않도록. */
+    pointer-events: none;
+    transform:scale3d(1.08, 1.08, 1.08);
+    -webkit-transform:scale3d(1.08, 1.08, 1.08);
+    -moz-transform:scale3d(1.08, 1.08, 1.08);
+    -ms-transform:scale3d(1.08, 1.08, 1.08);
+    -o-transform:scale3d(1.08, 1.08, 1.08);
+
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    -moz-transition: -moz-transform 150ms ease-in-out;
+    -ms-transition: -ms-transform 150ms ease-in-out;
+    -o-transition: -ms-transform 150ms ease-in-out;
+}
+
+.gallery ul.list li.selected a::after,
+.gallery ul.list li a:hover::after{
+    /* 이미지 호버중일 때, 선택중일 때만 원래 크기로 돌아오면서 보이게 됨.*/
+    transform:scale3d(1, 1, 1);
+}
+
+#store{
+    margin-top: 500px;
+    display: block;
+    text-align: center;
+
+    /* border: 3px solid red; */
+}
+
+#store article{
+   position: relative;
+    
+}
+
+#store img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+
+    /* padding: 30px; */
+    margin-bottom: 100px;
+    background-image: radial-gradient(transparent, black);
+}
+
+#store .textSet{
+    position: absolute;
+    text-align: left;
+    top:480px;
+    left: 50px;
+    width: 600px;
+
+}
+
+#store .textSet h3{
+    font-size: 40px;
+    color: white
+}
+
+#store .textSet p{
+    color: white;
+    font-size: 16px;
+    /* background-color: white; */
+    height: 100px;
+    line-height: 20px;
+}
+
+
+
+
+
