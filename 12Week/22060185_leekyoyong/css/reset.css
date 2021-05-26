@@ -1,0 +1,28 @@
+html, body, div, h1, h2, h3, h4, h5, h6, span, object, iframe, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, select, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, button, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* font-size: 16px; */
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.02em;
+    /* color: #707070; */
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    word-break: keep-all;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: #000;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+}ol, ul, li {
+    list-style: none;
+}
