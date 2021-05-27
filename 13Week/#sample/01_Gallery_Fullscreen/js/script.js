@@ -1,115 +1,139 @@
-var galleryEl = document.getElementById('gallery');
-// document.querySelector('#gallery');
-var viewEl = galleryEl.querySelector('.view');
-var viewContainerEl = viewEl.querySelector('.view-container');
-var viewItemEls = viewContainerEl.querySelectorAll('.view-item');
-var viewItemImgEls = viewContainerEl.querySelectorAll('.view-item > img');
+var galleryEl = document.querySelector("#gallery"),
+    viewEl = galleryEl.querySelector(".view"),
+    viewContainerEl = viewEl.querySelector(".view-container"),
+    viewItemEls = viewContainerEl.querySelectorAll(".view-item"),
+    viewItemImgEls = viewContainerEl.querySelectorAll(".view-item > img"),
+    listEl = galleryEl.querySelector(".list"),
+    listItemEls = listEl.querySelectorAll("li"),
+    btnListItemEls = listEl.querySelectorAll("li > a"),
 
-var listEl = galleryEl.querySelector('ul.list');
-var listItemEls = listEl.querySelectorAll('li'); // [li, li, li, li]
-var btnListItemEls = listEl.querySelectorAll('li > a'); // [a, a, a, a]
+    paddleNavEl = galleryEl.querySelector(".paddle-nav"),
+    btnPaddleNavEls = paddleNavEl.querySelectorAll("button.arrow"),
+    btnPaddleNavPrevEl = paddleNavEl.querySelector("button.arrow.prev"),
+    btnPaddleNavNextEl = paddleNavEl.querySelector("button.arrow.next"),
 
-var _galleryWidth = null;
-var _galleryHeight = null;
+    _isAni = false,
+    _galleryW = null,
+    _galleryH = null,
+    _imgOW = 1600,
+    _imgOH = 1000,
+    _cuId = 0,
+    _exId = null,
+    _max = null,
+    _duration = 400,
+    _addDuration = 200;
 
-var _galleryMax = viewItemEls.length;
-// 전체 항목의 개수.
-
-var _duration = 300;
-var _addDuration = 100;
-
-var cuId = 0;
-var exId = cuId;
-
-// NodeList[?,?,?,?] -> Array[?,?,?,?]
 btnListItemEls = Array.prototype.slice.call(btnListItemEls);
-
-function onResizeWindow() {
-    console.log('resize');
-    console.log(window.innerWidth, window.innerHeight);
-    _galleryWidth = window.innerWidth;
-    _galleryHeight = window.innerHeight;
-    resizeGallery();
+function onResize() {
+    _galleryW = window.innerWidth;
+    _galleryH = window.innerHeight;
+    galleryResize();
 }
-
-function onTransitionEnd() {
-    console.log('end!');
-    viewContainerEl.style.removeProperty('transition');
+function onTransitionEnd(e) {
+    _isAni = false;
+    viewContainerEl.style.removeProperty("transition");
 }
-
-function onClickBtnListItem(idx, e) {
+function onClickListItem(e) {
     e.preventDefault();
+    if(_isAni) return;
+    var el = e.currentTarget, parentEl = el.parentElement, index = btnListItemEls.indexOf(el);
+    if(!parentEl.classList.contains("selected")) {
+        _cuId = index;
+        gallerySlide();
+    }
+}
+function onClickPaddleNav(e) {
+    e.preventDefault();
+    if(_isAni) return;
     var el = e.currentTarget;
-    // var idx = btnListItemEls.indexOf(el);
-    var itemEl = el.parentElement;
-    if (exId !== idx) {
-        cuId = idx;
-        listItemEls[exId].classList.remove('selected');
-        itemEl.classList.add('selected');
-        slideGallery();
+    if(el.classList.contains("prev")) {
+        _cuId--;
+        if(_cuId < 0) _cuId = 0;
+    }else if(el.classList.contains("next")) {
+        _cuId++;
+        if(_cuId > _max - 1) _cuId = _max - 1;
+    }
+    if(_exId !== _cuId) gallerySlide();
+}
+function getImageInfo(index) {
+    var image = new Image();
+    image.src = viewItemImgEls[index].getAttribute("src");
+    image.onload = function() {
+        viewItemImgEls[index].setAttribute("data-width", image.naturalWidth);
+        viewItemImgEls[index].setAttribute("data-height", image.naturalHeight);
     }
 }
-
-function slideGallery(static) {
-    // transform : translateX(?)
-    var bool = static ? static : false;
-    var x = _galleryWidth * cuId * -1;
-    viewContainerEl.style.transform = 'translate3d(' + x + 'px, 0, 0)';
-    if (!bool) {
-        var duration = _duration + _addDuration * Math.abs(exId - cuId); // 400, 500, 600
-        // console.log(Math.abs(exId - cuId)); // - 탈락.
-        // console.log(exId - cuId);
-        // console.log(duration);
-        var easing = 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
-        // viewContainerEl.style.left = x + 'px';
-        // viewContainerEl.style.transform = `translateX(${x}px)`;
-        // viewContainerEl.style.transform = 'translateX(' + x + 'px)';
-        // viewContainerEl.style.transform = `translate3d(${x}px, 0, 0)`;
-        // viewContainerEl.style.transition = 'transform ' + duration + 'ms ease-in-out';
-        viewContainerEl.style.transition = 'transform ' + duration + 'ms ' + easing;    
-        exId = cuId;
-    } else {
-        viewContainerEl.style.removeProperty('transition');
+function setPaddleActive() {
+    if(_cuId === 0) {
+        btnPaddleNavPrevEl.classList.add("disabled");
+        btnPaddleNavNextEl.classList.remove("disabled");
+    }else if(_cuId === _max - 1) {
+        btnPaddleNavPrevEl.classList.remove("disabled");
+        btnPaddleNavNextEl.classList.add("disabled");
+    }else{
+        btnPaddleNavPrevEl.classList.remove("disabled");
+        btnPaddleNavNextEl.classList.remove("disabled");
     }
 }
-
-function resizeGallery() {
-    // container width - window width x 아이템의 개수
-    var containerWidth = _galleryWidth * _galleryMax;
-    // console.log(containerWidth);
-    viewEl.style.width = _galleryWidth + 'px';
-    viewEl.style.height = _galleryHeight + 'px';
-    viewContainerEl.style.width = containerWidth + 'px';
-    for(var i = 0; i < _galleryMax; i++) {
-        viewItemEls[i].style.width = _galleryWidth + 'px';
-    }
-    slideGallery(true);
+function setListActive() {
+    listItemEls[_exId].classList.remove("selected");
+    listItemEls[_cuId].classList.add("selected");
 }
-
+function gallerySlide(static) {
+    var left = _galleryW * _cuId * -1,
+        duration = _duration + _addDuration * Math.abs(_cuId - _exId),
+        bool = (static) ? static : false;
+    viewContainerEl.style.transform = "translate3d(" + left + "px, 0, 0)";
+    if(!bool) {
+        _isAni = true;
+        setPaddleActive();
+        setListActive();
+        viewContainerEl.style.transition = "transform " + duration + "ms cubic-bezier(0.455, 0.03, 0.515, 0.955)";
+        _exId = _cuId;
+    }else{
+        viewContainerEl.style.removeProperty("transition");
+        _isAni = false;
+    }
+}
+function galleryResize() {
+    viewEl.style.width = _galleryW + "px";
+    viewEl.style.height = _galleryH + "px";
+    viewContainerEl.style.width = _galleryW * _max + "px";
+    for(var i = 0; i < _max; i++) {
+        viewItemEls[i].style.width = _galleryW + "px";
+        var imgW, imgH, imgT, imgL;
+        imgW = _galleryW;
+        imgH = Math.round(_imgOH * imgW / _imgOW);
+        if(imgH <= _galleryH) {
+            imgH = _galleryH;
+            imgW = Math.round(_imgOW * imgH / _imgOH);
+        }
+        imgT = Math.round(_galleryH / 2 - imgH / 2);
+        imgL = Math.round(_galleryW / 2 - imgW / 2);
+        viewItemImgEls[i].style.width = imgW + "px";
+        viewItemImgEls[i].style.height = imgH + "px";
+        viewItemImgEls[i].style.top = imgT + "px";
+        viewItemImgEls[i].style.left = imgL + "px";
+    }
+    gallerySlide(true);
+}
 function addEvent() {
-
-    window.addEventListener('resize', onResizeWindow);
-
-    // transition webkit / moz / ms / o
-    viewContainerEl.addEventListener('webkitTransitionend', onTransitionEnd);
-    viewContainerEl.addEventListener('transitionend', onTransitionEnd);
-    for(var i = 0; i < btnListItemEls.length; i++) {
-        btnListItemEls[i].addEventListener('click', onClickBtnListItem.bind(null, i));
+    window.addEventListener("resize", onResize);
+    viewContainerEl.addEventListener("webkitTransitionEnd", onTransitionEnd);
+    viewContainerEl.addEventListener("transitionend", onTransitionEnd);
+    for(var i = 0; i < _max; i++) {
+        getImageInfo(i);
+        btnListItemEls[i].addEventListener("click", onClickListItem);
+    }
+    for(var j = 0; j < btnPaddleNavEls.length; j++) {
+        btnPaddleNavEls[j].addEventListener("click", onClickPaddleNav);
     }
 }
-
-function reset() {
-    cuId = 0;
-    listItemEls[exId].classList.remove('selected');
-    listItemEls[cuId].classList.add('selected');
-    // resizeGallery();
-    exId = cuId;
-}
-
 function init() {
-    reset();
+    _max = viewItemEls.length;
+    _exId = _cuId;
+    setPaddleActive();
     addEvent();
-    // **
     window.dispatchEvent(new Event('resize'));
 }
 init();
