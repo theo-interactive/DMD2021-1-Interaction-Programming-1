@@ -1,0 +1,50 @@
+body{
+    margin:0px;
+}
+.wrap{
+    min-width: 700px;
+    max-width: 1600px;
+    margin: 0px auto;
+}
+.clearfix::after{ /* float left 이상증상 방지 */
+    content: ""; /* 특정 브라우저 이상증상 해결용 */
+    clear: both; /* float 제거 : 양쪽(둘다) */
+    display: table; /* 특정 브라우저 이상증상 해결용 */ /*float_left 위에있는 부모객체에 clear fix 적어야함 */
+}
+h1{
+    color:black;
+    font-weight: lighter;
+    margin: 25px
+}
+header li{
+    float:left;
+    list-style:none;
+    padding: 0px 10px;
+}
+nav{
+    padding: 20px;
+}
+.menu {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+.float_left{
+    float:left;
+}
+.float_right{
+    float: right;
+}
+.text h1{
+    pad: 100px;
+    margin-top: 200px;
+}
+#text {
+    background-image: url("/img/1-1.jpg");
+}
+#text h3 {
+    text-align: center;
+}
+.but {
+    display: none;
+}
