@@ -5,8 +5,6 @@ var htmlEl = document.documentElement;
 var accordionEl = document.querySelector('#accordion');
 var viewItemEls = accordionEl.querySelectorAll('.view-item');
 var btnCloseEls = accordionEl.querySelectorAll('.view-item > .btn-close');
-var cententEls = accordionEl.querySelectorAll('.centent-main');
-// console.log(cententEls);
 
 var _cuId = null;
 var _exId = _cuId;
