@@ -1,0 +1,123 @@
+/* 구글 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 초기화 코드 태그*/
+/* 구글에 초기화 코드 치면 많이 나온다. */
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,button{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: turquoise;
+}
+address{
+    font-style: normal;
+}
+header{
+    background-color: gray;
+}
+section{
+    background-color: pink;
+}
+aside{
+    background-color: aqua;
+}
+footer{
+    background-color: #000;
+    color: white;
+}
+footer a{
+    color: white;
+}
+/* 공통 클래스 */
+.blind{
+    display: none;
+}
+.wrap{
+    max-width: 1920px;
+}
+.inner{
+    max-width: 1440px;
+}
+/* 배경 컬러 설정 */
+.mainColorBg {
+    background-color: #ec908a;
+}
+.subColorBg{
+    background-color: #f2d5cc;
+}
+.whiteColorBg{
+    background-color: #ffffff;
+}
+/* 텍스트 컬러 설정 */
+.textBody{
+    color: #333;
+}
+.textBlack{
+    color: #000;
+}
+/* 마진 설정 */
+.marginTop50{
+    margin-top: 50px;
+}
+.marginTop30{
+    margin-top: 30px;
+}
+.marginTop10{
+    margin-top: 10px;
+}
+.marginBottom50{
+    margin-bottom: 50px;
+}
+.marginBottom30{
+    margin-bottom: 30px;
+}
+.marginBottom10{
+    margin-bottom: 10px;
+}
+/* 미디어쿼리 모바일에서 데스크탑 */
+/* 데스크탑 1920 */
+@media screen and (max-width: 1920px){ 
+     body{
+        background-color: red;
+    }
+}
+/* 데스크탑 1440 */
+@media screen and (max-width: 1440px){ 
+    
+}
+/* 아이패드 가로/ 랩탑 컴퓨터 */
+@media screen and (max-width: 1024px){ 
+    body{
+        background-color: green;
+    }
+}
+/* 아이패드 세로 */
+@media screen and (max-width: 768px){ 
+    
+}
+/* 아이폰 678 플러스 */
+@media screen and (max-width: 414px){ 
+    
+}
+/* 아이폰 675 */
+@media screen and (max-width: 375px){ 
+    body{
+        background-color: orange;
+    }
+}
+
+

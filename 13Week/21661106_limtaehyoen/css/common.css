@@ -1,0 +1,331 @@
+/* 구글 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 초기화 코드 태그*/
+/* 구글에 초기화 코드 치면 많이 나온다. */
+html{
+    --main-nav1_color: #DC143C;
+    --main-nav2_color: #9400D3;
+    --main-nav3_color: #0000FF;
+    --back-ground_color: #bbab9b;
+}
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--back-ground_color);
+}
+header{
+    overflow: hidden;
+}
+#bg-img{
+    background-image: url("../images/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 970px;
+    box-sizing: border-box;
+    z-index: 0;
+    transition: all .7s ease;
+    margin: 0 auto;
+    opacity: 75%;
+}
+#bg-img:hover{
+    opacity: 100%;
+    transform: scale(1.04);
+}
+#bg-img::before{
+    background-image: radial-gradient(transparent, rgba(0,0,0,1));
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+.container {
+    position: absolute;
+    margin: 40px;
+    margin-left: 50px;
+    width: auto;
+}
+.topnav {
+    overflow: hidden;
+    display: block;
+}
+.topnav h1{
+    padding: 10px;
+}
+.black{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.red{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.purple{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.blue{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.black:hover{
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+.red:hover{
+    color: var(--main-nav1_color);
+    text-shadow: 2px 2px 2px white;
+}
+.purple:hover{
+    color: var(--main-nav2_color);
+    text-shadow: 2px 2px 2px white;
+}
+.blue:hover{
+    color: var(--main-nav3_color);
+    text-shadow: 2px 2px 2px white;
+}
+.mainLetter{
+    position: absolute;
+    float: inherit;
+}
+.border{
+    border-bottom: 2px double white;
+    border-radius: 40%;
+    margin: 30px 0;
+}
+.border h2{
+    font-size: 50px;
+    margin: 20px 0;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#section0{
+    position: relative;
+    padding: 20px 0;
+    min-height: 100%;
+    top: 740px;
+    box-sizing: border-box;
+}
+#section0 h1 a{
+    color: white;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+    font-size: 80px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 70%;
+}
+#section0 h1 a:hover{
+    color: black;
+    text-shadow: 0px 0px 8px white;
+}
+body,button{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+address{
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+.fixedNav{
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+}
+.inner{
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    width: 1440px;
+    height: 100%;
+    border: 2px solid blue;
+}
+#section1{
+    background-color: var(--back-ground_color);
+    box-sizing: content-box;
+    /* border: 7px solid purple; */
+    height: 100vr;
+    /* border-style: double none; */
+    padding: 20px 0;
+    margin: 5px 0;
+    margin-left: 0;
+    min-height: 970px;
+}   
+#section1::after:first-child{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255,0,0,1));
+    content: "";
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+.director img{
+    width: 600px;
+}
+.director{
+    display: inline-block;
+    margin: 20px 100px;
+    
+}
+.director h3{
+    font-size: 40px;
+}
+.director h4{
+    font-size: 27px;
+}
+.act{
+    display: inline-block;
+    margin: 30px 60px;
+}
+.act img{
+    width: 600px;
+    display: inline-block;
+}
+.act h3{
+    font-size: 40px;
+}
+.act h4{
+    font-size: 27px;
+}
+.inpic img{
+    width: 600px;
+    height: 350px;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.gallery .pic{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.mid{
+    background-color: wheat;
+    height: 40px;
+    opacity: 40%;
+}
+#section1 h2{
+    font-size: 50px;
+}
+#section2{
+    background-color: var(--back-ground_color);
+    /* border: 7px solid red; */
+    /* border-style: double none; */
+    color: white;
+    min-height: 970px;
+}
+#section3{
+    background-color: var(--back-ground_color);
+    color: wheat;
+    min-height: 970px;
+}
+.lnline{
+    display: inline;
+}
+#main{
+    display: inline;
+}
+aside{
+    background-color: aqua;
+}
+footer{
+    background-color: #000;
+    color: white;
+}
+footer a{
+    color: white;
+}
+/* 공통 클래스 */
+.blind{
+    display: none;
+}
+.wrap{
+    max-width: 1920px;
+}
+/* 배경 컬러 설정 */
+.mainColorBg {
+    background-color: #ec908a;
+}
+.subColorBg{
+    background-color: #f2d5cc;
+}
+.whiteColorBg{
+    background-color: #ffffff;
+}
+/* 텍스트 컬러 설정 */
+.textBody{
+    color: #333;
+}
+.textBlack{
+    color: #000;
+}
+/* 마진 설정 */
+.marginTop50{
+    margin-top: 50px;
+}
+.marginTop30{
+    margin-top: 30px;
+}
+.marginTop10{
+    margin-top: 10px;
+}
+.marginBottom50{
+    margin-bottom: 50px;
+}
+.marginBottom30{
+    margin-bottom: 30px;
+}
+.marginBottom10{
+    margin-bottom: 10px;
+}
+/* 미디어쿼리 모바일에서 데스크탑 */
+/* 아이폰 675 */
+@media screen and (min-width: 375px){ 
+    body{
+        /* background-color: orange; */
+    }
+}
+/* 아이폰 678 플러스 */
+@media screen and (min-width: 414px){ 
+    
+}
+/* 아이패드 세로 */
+@media screen and (min-width: 768px){ 
+    
+}
+/* 아이패드 가로/ 랩탑 컴퓨터 */
+@media screen and (min-width: 1024px){ 
+    body{
+        /* background-color: green; */
+    }
+}
+/* 데스크탑 1440 */
+@media screen and (min-width: 1440px){ 
+    
+}
+/* 데스크탑 1920 */
+@media screen and (min-width: 1920px){ 
+    body{
+        /* background-color: red; */
+    }
+}
+
+

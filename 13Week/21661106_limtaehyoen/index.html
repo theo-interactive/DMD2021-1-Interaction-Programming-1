@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- 파일 언어 설정 -->
+<!-- 한국어 ko 영어 en -->
+<html lang="ko">
+<head>
+    <!-- 한글 깨짐 방지 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--//휴대폰 때문에 무조건 넣기-->
+    <!-- 페이스북 공유 메타정보 -->
+    <meta property="og:title" content="타이틀" />
+    <meta property="og:url" content="kingistae97.dothome.co.kr" />
+    <meta property="og:image" content="images/site.jpg" />
+    <meta property="og:description" content="사이트 설명이 들어갑니다." />
+    <!-- 트위터 공유 메타정보 -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="타이틀" />
+    <meta name="twitter:url" content="kingistae97.dothome.co.kr" />
+    <meta name="twitter:image" content="images/site.jpg" />
+    <meta name="twitter:description" content="사이트 설명이 들어갑니다." />
+    <!-- 검색 메타 정보 -->
+    <meta name="subject" content="Kaywon Hackathon 2021">
+    <meta name="title" content="Kaywon Hackathon 2021" />
+    <meta name="author" content="kingistae97.dothome.co.kr">
+    <meta name="description" content="사이트 설명이 들어갑니다." />
+    <meta name="keywords" content="키워드1, 키워드2, ..." />
+    <!-- 모바일 자동전화 걸기 방지 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 브라우저 파비콘 & 아이폰 홈 버튼 -->
+    <link rel="icon" href="images/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="images/applefavicon.ico" sizes="180x180" />
+    
+    <!-- 제이쿼리 cdn 로드 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    
+    <title>Me Before You</title>
+</head>
+<body>
+    <header>
+        <div id="bg-img">
+            <!-- <div class="container">
+                <div class="topnav">
+                    <h1><a href="#section2" class="red">영화소개</a></h1>
+                    <h1><a href="#section1" class="purple">등장인물</a></h1>
+                    <h1><a href="#section3" class="blue">영화속 사진</a></h1>
+                </div>
+            </div> -->
+            <section id="section0">
+                <h1><a href="#section2">Me Before You</a></h1>
+            </section>
+        </div>
+    </header>
+    
+    <nav class="fixedNav">
+        <div class="container">
+            <div class="topnav">
+                <h1><a href="#bg-img" class="black">Main</a></h1>
+                <h1><a href="#section2" class="red">Introduce</a></h1>
+                <h1><a href="#section1" class="purple">Characters</a></h1>
+                <h1><a href="#section3" class="blue">Photos</a></h1>
+                <h1><a href="#footer" class="black">More</a></h1>
+            </div>
+        </div>
+    </nav>
+
+    <section id="section2">
+        <section class="inner">
+            <div class="border">
+                <h2>영화 소개</h2>
+            </div>
+            <img src="images/poster.jfif" alt="poster">
+        </section>
+    </section>
+
+    <div class="mid"></div>
+
+    <section id="section1">
+        <article>
+            <section class="inner">
+                <div class="border">
+                    <h2>등장인물</h2>
+                </div>
+                <div class="director">
+                    <h3>감독</h3>
+                    <div class="border"></div>
+                    <h4>테아 샤론</h4>
+                    <a href="#">><img src="images/thea.jpg" alt="thea"></a>
+                </div>
+                <div class="act">
+                    <h3>출연</h3>
+                    <div class="border"></div>
+                    <h4>에밀리아 클라크</h4>
+                    <img src="images/emilia.jpeg" alt="emilia">
+                    <h4>샘 클라플린</h4>
+                    <img src="images/sam.jpg" alt="sam">
+                    <h4>재닛 맥티어</h4>
+                    <img src="images/janet.png" alt="janet">
+                    <h4>찰스 댄스</h4>
+                    <img src="images/charles.jpg" alt="charles">
+                </div>
+            </section>
+        </article>
+    </section>
+    
+    <div class="mid"></div>
+
+    <section id="section3">
+        <section class="inner">
+            <div class="border">
+                <h2>영화속 사진</h2>
+            </div>
+            <div class="inpic gallery">
+                <article class="pic">
+                    <img src="images/movie5.jfif" alt="movie1">
+                </article>
+                <article class="pic">
+                    <img src="images/movie2.jpg" alt="movie2">
+                </article>
+                <article class="pic">
+                    <img src="images/movie3.jpg" alt="movie3">
+                </article>
+                <article class="pic">
+                    <img src="images/movie4.jpg" alt="movie4">
+                </article>
+                <article class="pic">
+                    <img src="images/movie6.jpg" alt="movie4">
+                </article>
+                <article class="pic">
+                    <img src="images/movie7.jfif" alt="movie4">
+                </article>
+                <article class="pic">
+                    <img src="images/movie8.jpg" alt="movie4">
+                </article>
+            </div>
+        </section>
+    </section>
+    
+    <footer id="footer">
+        <h2><a href="#" title="상단으로 이동">Logo</a></h2> 
+        <!--#을 넣으면 맨위로 올라감-->
+        <address>
+            <p>Address : 서울시 00구 00동<br>
+                사업자등록번호 : 162-21-21455 <br>
+                Mail : <a href="mailto:qwerqwer@naver.com">qwerqwer@naver.com</a>
+                Phone : <a href="tel:010-xxx-xxxx"></a> 010-xxxx-xxxx
+                Fax : 010-xxxx-xxxx</p>
+            </address>
+            <ul class="sns">
+                <li><a href="#" target="_blank">Facebook</a></li> 
+                <!--target _blank는 새로운 창에서 떠진다.-->
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Youtube</a></li>
+            </ul>
+            <p> Copyright © 2021 Kaywon Hackathon All right reserved.</p>
+        </footer>
+        <!-- 제이쿼리 파일로드 -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="js/scripts.js" type="text/javascript"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+    </body>
+    </html>
